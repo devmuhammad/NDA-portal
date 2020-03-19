@@ -1,0 +1,98 @@
+/* Structure */
+.example-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .flex-el{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .inp2{
+    padding: 0px 10px 0 10px ;
+}
+
+.flex-end{
+  float: right;
+  color: white;
+}
+
+button{
+  background: rgba(0, 0, 14, 0.76);
+  color: white;
+  // float: right;
+  // margin-top: 1em;
+  bottom: 0;
+  position: absolute;
+}
+
+.flex-el2{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.flex-el3{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .inp3{
+    padding: 0px 10px 0 10px ;
+    width: 70%;
+  }
+  .inp4{
+    padding: 0px 10px 0 10px ;
+    width: 30%;
+  }
+}
+
+sup{
+  color: red;
+  font-weight: 600;
+}
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  
+}
+.card1 {
+  text-align: left;
+  width: 40%;
+  padding: 10px 20px 10px 20px;
+}
+.card2 {
+  text-align: left;
+  width: 40%;
+  padding: 10px 20px 10px 20px;
+}

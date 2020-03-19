@@ -1,0 +1,66 @@
+<div>
+    <div style="color: rgba(0, 0, 14, 0.76);">Choice of Service in Order of Priority  <sup>*</sup></div><br>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <div class="choice">
+        <mat-form-field appearance="outline" class="ip">
+            <mat-label>1st Choice: </mat-label>
+            <mat-select [(ngModel)] = "choice.firstchoice">
+                <mat-option value = ''> -Select Service Choice- </mat-option>
+                <mat-option value = 'NIGERIAN ARMY'> NIGERIAN ARMY </mat-option>
+                <mat-option value = 'NIGERIAN NAVY'> NIGERIAN NAVY </mat-option>
+                <mat-option value = 'NIGERIAN AIRFORCE'> NIGERIAN AIRFORCE </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="ip">
+            <mat-label>2nd Choice: </mat-label>
+            <mat-select [(ngModel)] = "choice.secondchoice">
+                <mat-option value = ''> -Select Service Choice- </mat-option>
+                <mat-option value = 'NIGERIAN ARMY'> NIGERIAN ARMY </mat-option>
+                <mat-option value = 'NIGERIAN NAVY'> NIGERIAN NAVY </mat-option>
+                <mat-option value = 'NIGERIAN AIRFORCE'> NIGERIAN AIRFORCE </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <br>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <br>
+    <div style="color: rgba(0, 0, 14, 0.76); font-weight: 600;">Faculties and Departments</div>
+    <br>
+    &nbsp;
+    &nbsp;
+    <p>Select Faculty and Department into which you wish to register.  <sup>*</sup></p>
+    &nbsp;
+    <br>
+    <div class="choice">
+        <mat-form-field appearance="outline" class="ip2">
+            <mat-label>Choose Faculty:</mat-label>
+            <mat-select (selectionChange)="selectedFaculty($event.value)" [(ngModel)]="choice.faculty">
+                <mat-option *ngFor="let faculty of faculties" [value]="{id:faculty.id, name:faculty.name}" > {{faculty.name}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="ip2" >
+            <mat-label>Choose Department:</mat-label>
+            <mat-select (selectionChange)="selectedDept($event.value)" [disabled]="!dptclicked" [(ngModel)]="choice.department">
+                <mat-option  *ngFor="let department of dpt" [value]="{id:department.id, name:department.name}"> {{department.name}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="ip2">
+            <mat-label>Choose Course:</mat-label>
+            <mat-select [disabled]="!crsclicked" [(ngModel)]="choice.course">
+                <mat-option  *ngFor="let course of crs" [value]="course.name"> {{course.name}} </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    &nbsp;
+    &nbsp;
+    &nbsp;
+</div>
+&nbsp;
+
+&nbsp;
+<button mat-button (click)="submit()">Save</button>&nbsp;

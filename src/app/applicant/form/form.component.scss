@@ -1,0 +1,181 @@
+// @import url("./css/steppers.css");
+// @import url("./css/steppers.min.css");
+
+body{
+    background: rgba(0, 0, 14, 0.76);
+    font-size: 14px;
+    overflow: hidden
+}
+.card{
+    width: 90%;
+    margin:10px auto;
+}
+.main-container{
+    margin: auto;
+    padding: 10px;
+    background: white;
+  }
+
+  .tab-container{
+    li{
+      font-weight: lighter;
+    }
+}
+button{
+  background: rgba(0, 0, 14, 0.76);
+  color: white;
+}
+
+.quest{
+  padding: 20px 0 0px 0;
+}
+
+  .general-title{
+    color:red; 
+    font-size:16px; 
+    font-weight: 500;
+    padding: 20px 0 20px 0;
+  }
+
+  .flex-end{
+    float: right;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .step-bg{
+    // margin:40px;
+    margin-left:60px;
+    margin-right: 60px;
+    border-radius: 10px;
+    overflow:hidden;
+    // background-color: #ffffff;
+  
+  }
+  .mat-tab-body-content {
+    height: 100%;
+    // /* overflow: auto;
+  }
+  .progbar{
+    margin-left:60px;
+    margin-right: 60px;
+    // border-radius: 10px;
+  }
+  
+  .stepbg {
+    background-color: #ffffff;
+    border-radius: 10px;
+    // height:415px;
+    height: auto;
+    overflow:hidden;
+  }
+  .cardbg {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left:10px;
+    // height:415px;
+    height: auto;
+    overflow:hidden;
+  }
+  .body{
+    flex:1;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+  .example-card {
+    max-width: 20%;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    margin-left: 40px;
+  }
+  .right-card{
+    max-width: 70%;
+  }
+  
+  ul.horizontal-fix li a {
+    padding: .84rem 2.14rem;
+    }
+  
+    .step-top{
+      margin:10px;
+      // margin-left:70px;
+      // margin-right: 70px;
+      background-color:transparent;
+      // border-radius: 10px;
+    }
+    :host ::ng-deep { 
+  
+  .mat-step-header .mat-step-icon-selected,
+  .mat-step-header .mat-step-icon-state-done,
+  .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgba(0, 0, 14, 0.76) !important;
+    color: white;
+  }
+  
+  }
+  
+  .flex-el{
+    margin-top: 20px;
+  }
+  
+  .mat-checkbox{
+      margin-right:50px
+  }
+  
+  sup{
+    color: red;
+    font-weight: 00;
+  }
+  
+  :host ::ng-deep.mat-checkbox-layout{
+    .mat-checkbox-label{
+      white-space: normal!important;
+    }
+  }
+  
+  .list-option{
+    height: 100%!important;
+    margin-bottom: 20px;
+  }
+  
+  .text-area{
+    width:70%
+  }
+  
+  @media screen and (max-width:600px){
+    .text-area{
+      width:100%!important;
+    } 
+  }
+
+
+  @media (min-width: 200px){
+    .card{
+      font-size: 9px;
+    }
+  }
+
+  @media (min-width: 400px){
+    .card{
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: 600px){
+    .card{
+      font-size: 13px;
+    }
+  }
+
+  @media (min-width: 800px){
+    .card{
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1000px){
+    .card{
+      font-size: 17px;
+    }
+  }

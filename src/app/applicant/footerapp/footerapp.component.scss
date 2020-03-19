@@ -1,0 +1,51 @@
+
+footer{
+    background: rgba(0, 0, 14, 0.76);
+    height: 3em;
+    bottom: 0;
+    float: right;
+    width: 100%;
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(18, 252, 88);
+    cursor: pointer;
+}
+
+footer a{
+    color: white;
+}
+
+a:hover{
+    color: red;
+}
+
+.foot{
+    float: right;
+}
+
+@media (min-width:100px){
+    footer{
+        font-size: 4px;
+    }
+}
+
+@media (min-width:300px){
+    footer{
+        font-size: 8px;
+    }
+}
+
+@media (min-width:800px){
+    footer{
+        font-size: 12px;
+    }
+}
+
+@media (min-width:1000px){
+    footer{
+        font-size: 14px;
+    }
+}

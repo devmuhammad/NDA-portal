@@ -1,0 +1,156 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+
+
+}
+.work{
+    position: absolute;
+    right: 30px;
+    top: 7em;
+      .passport{
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+
+
+button{
+    background-color: rgba(0, 0, 14, 0.76);
+    color: white;
+    float: right;
+}
+
+.grid{
+    display: grid;
+    width: 85%;
+    grid-template-columns: 30% 40%;
+}
+
+@media(min-width: 200px){
+    .logo{
+        width: 3em;
+        height: 1.5em;
+    }
+    h2{
+        font-size: 12px;
+    }
+    h3{
+        font-size: 10px;
+    }
+}
+
+@media(min-width: 400px){
+    .logo{
+        width: 4em;
+        height: 4em;
+    }
+    h2{
+        font-size: 14px;
+    }
+    h3{
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 600px){
+    .logo{
+        width: 3em;
+        height: 3em;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 800px){
+    .logo{
+        width: 5em;
+        height: 5em;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1000px){
+    .logo{
+        width: 8em;
+        height: 8em;
+    }
+    h2{
+        font-size: 26px;
+    }
+    h3{
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 200px){
+    .passport{
+      width: 2em;
+      height: 2em;
+    }
+    .img{
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  @media (min-width: 400px){
+    .passport{
+      width: 8em;
+      height: 8em;
+    }
+    .img{
+      width: 8em;
+      height: 8em;
+    }
+  }
+
+  @media (min-width: 600px){
+    .passport{
+      width: 10em;
+      height: 10em;
+    }
+    .img{
+      width: 10em;
+      height: 10em;
+    }
+  }
+
+  @media (min-width: 800px){
+    .passport{
+      width: 13em;
+      height: 13em;
+    }
+    .img{
+      height: 13em; 
+      width: 13em;
+    }
+  }
+
+  @media (min-width: 1000px){
+    .passport{
+      width: 13em;
+      height: 13em;
+    }
+    .img{
+      height: 13em; 
+      width: 13em;
+    }
+    .work{
+        top: 15em;
+    }
+  }

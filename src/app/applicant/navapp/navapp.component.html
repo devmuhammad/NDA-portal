@@ -1,0 +1,18 @@
+<div class="logo">
+    <img src="\assets\images\download2.png" routerLink="/">
+    <span class="head">Nigerian Defence Academy</span>
+    <div class="nav">
+        <div class="download">
+            <span style="color: white; cursor: pointer;" [matMenuTriggerFor]="menu">Download</span>
+            <mat-menu  #menu="matMenu">
+                <button mat-menu-item href="\assets\Advertfor72RC.pdf ">Advertisement</button>
+                <button mat-menu-item href="\assets\Requirements72RC.pdf">Requirements</button>
+            </mat-menu>
+        </div> 
+        <span style="cursor: pointer;"> <a href="mail:info@ndaapplications.net"> Contact</a></span>
+    </div>
+    <div class="logup">
+    <p>Welcome <b style="color: white;">{{loggedInUser.name | titlecase}}</b></p>&nbsp;&nbsp;
+        <mat-icon class="logout" routerLink = "/login">power_settings_new</mat-icon>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+.logo{
+    background-color: rgba(0, 0, 14, 0.76);
+    // background-size: cover;
+    // display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 4em;
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.nav{
+    padding: 1em 5em 0 5em;
+    align-self: center;
+
+    span{
+        padding: 0px 10px 0px 10px;
+    }
+    
+    li{
+        list-style-type: none;
+    }
+}
+
+
+#navmenu{
+    font-size: 15px;
+    padding-left: 5em;
+}
+
+.download{
+    position: relative;
+    display: inline-block;
+    cursor: context-menu;
+}
+
+.downloadmenu{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 14, 0.76);
+    padding: 5px 10px 8px 5px ;
+    widows: 5vw;
+    z-index: 1;
+    cursor: pointer;
+    border-color: black;
+    border-width: thick;
+    border: solid;
+}
+
+.download:hover .downloadmenu  {
+    display: block;
+
+}
+
+.logup{
+    float: right;
+    align-self: center;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.sign{
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.login{
+    padding: 2px 5px 2px 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (min-width:100px){
+    .logo{
+        font-size: 8px;
+    }
+}
+
+@media (min-width:300px){
+    .logo{
+        font-size: 12px;
+    }
+}
+
+@media (min-width:800px){
+    .logo{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:1000px){
+    .logo{
+        font-size: 1em;
+    }
+}

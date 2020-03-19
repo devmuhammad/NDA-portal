@@ -1,0 +1,139 @@
+<app-navapp></app-navapp>
+
+<mat-card  class="card">
+<div class="main-container" >
+  <mat-tab-group  [selectedIndex]="selectedTab">
+    <mat-tab label="Instructions" >
+      <ng-template matTabContent >
+        <div class="tab-container">
+          <div class="general-title">Please read instructions below carefully </div>
+          &nbsp;
+          <div class="general-title" style="color: rgba(0, 0, 14, 0.76);"> REQUIREMENTS </div>
+          <li> You must have an ssce or neco result </li>
+          <li> You must have a JAMB result </li>
+          <li> You must add at least one SSCE/NECO results obtained. </li>
+          &nbsp;
+          <div class="general-title" style="color: rgba(0, 0, 14, 0.76);"> INSTRUCTIONS </div>
+          <li> <b>Do Not</b> forget to save whenever you see a save button. </li>
+          <li> Please ensure to fill all fields with the (<sup>*</sup>) in front.</li>
+          <li> After completing the form ensure to print the acknowledgement form.</li>
+          <li> Please note that uploaded passport cannot be changed.</li>
+          <li> Passport photo in jpg or png format. </li>
+          <li> The passport size must be less than or equal to 160kb </li>
+          &nbsp;
+          <div class="mt-5">
+            <mat-checkbox [(ngModel)]="instruct">
+              I understand the requirements stated above
+            </mat-checkbox>
+          </div>
+        
+          &nbsp;
+
+          <div>
+            <button mat-raised-button [disabled]=" instruct != true" (click)="switchTab('instruction')">Continue</button>
+          </div>
+        </div>        
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Your Information" [disabled] = "selectedTab !<= 1" >
+      <mat-horizontal-stepper class="step-top" linear labelPosition="bottom" #hrstepper>
+          <mat-step label="Personal Information" state="pInfo">  
+            &nbsp;
+            <app-personaldetails></app-personaldetails>
+    
+          </mat-step>
+
+          <mat-step label="Guardian Details" >
+            &nbsp;
+            &nbsp;
+            <app-guardian></app-guardian>
+  
+          </mat-step>
+
+          <mat-step label="Questionnaire" >
+            &nbsp;
+            <mat-radio-group aria-label="select Yes or No">
+              <mat-label style="font-weight: 400;"> Have you ever been admitted to a course at the Nigerian Defence Academy? <sup>*</sup> </mat-label><br>
+              <mat-radio-button class="quest" value="Y">Yes</mat-radio-button><br>
+              <mat-radio-button class="quest" value="N">No</mat-radio-button>
+            </mat-radio-group> <br>
+            <p>If yes, State why you did not complete the course</p>
+            <mat-form-field style="width: 70%;" appearance="outline">
+              <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"></textarea>
+            </mat-form-field><br>
+            <mat-divider></mat-divider>
+            <br>
+
+            <mat-radio-group aria-label="select Yes or No">
+              <mat-label style="font-weight: 400;"> Have you ever been convicted by a court of law? <sup>*</sup> </mat-label><br>
+              <mat-radio-button class="quest" value="Y">Yes</mat-radio-button><br>
+              <mat-radio-button class="quest" value="N">No</mat-radio-button>
+            </mat-radio-group>
+            <p>If yes, give the details</p>
+            <mat-form-field style="width: 70%;" appearance="outline">
+              <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10"></textarea>
+            </mat-form-field><br>
+            <div class="flex-end">
+              <button mat-button matStepperPrevious >Back</button> &nbsp;
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step label="Choice of Service" >
+            &nbsp;
+            &nbsp;
+            <app-choice></app-choice>
+            <br>
+            &nbsp;
+            <mat-checkbox [(ngModel)]="check">I hereby declare that the statements made in this application are true to the best of my knowledge and that
+              i am a citizen of the Federal Republic of Nigeria. (Candidates are warned that falsification of documents will attract automatic disqualification
+              and prosecution in a court of law).</mat-checkbox>
+            &nbsp; 
+            <br>
+            &nbsp; 
+            <div class="flex-end">
+              <button mat-button matStepperPrevious >Back</button> &nbsp;
+              <button mat-raised-button [disabled]=" check != true" (click)="switchTab('info')"> Next </button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+    </mat-tab>
+
+    <mat-tab label="Qualifications" [disabled] = "selectedTab !<= 2">
+      <ng-template matTabContent>
+        <app-school></app-school>
+        &nbsp;
+        &nbsp;
+        <div class="flex-end">
+          <button mat-button (click)="switchTab('qualification')"> Next </button>
+        </div>
+      </ng-template>
+
+    </mat-tab>
+
+    <mat-tab  label="Upload Document(s)" [disabled] = "selectedTab !<= 3"> 
+      <ng-template matTabContent >
+        <app-upload></app-upload>
+        &nbsp;<br>
+        <mat-checkbox style="width: 80%;" [(ngModel)]="checkup"> I hereby declare that the uploaded credential(s)/document(s) made in this application are true to the best of my knowledge and that <br>I am a citizen of the Federal Republic of Nigeria. 
+          (Canditates are warned that falsification of documents will attract automatic disqualification and prosecution in a court of law)</mat-checkbox>
+        &nbsp;<br>
+        <div class="flex-end">
+          <button mat-raised-button [disabled]="checkup != true" (click)="switchTab('upload')"> Next </button>
+        </div>
+      </ng-template>
+    </mat-tab>
+
+    <mat-tab label="Acknowledgement Form" [disabled] = "selectedTab != 4" > 
+      <ng-template matTabContent>
+        <app-print></app-print>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+</mat-card>
+<div style="margin-top: 6em;">
+  <app-footerapp></app-footerapp>
+</div>

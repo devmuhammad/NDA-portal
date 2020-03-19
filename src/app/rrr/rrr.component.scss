@@ -1,0 +1,134 @@
+.form {
+    text-align: left;
+    margin: 0 auto;
+}
+
+input{
+    width: 100%;
+    height: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+
+}
+
+.formfield{
+    display: flex;
+    padding: 1em 2em 2em 2em;
+    margin: 2em auto;
+    flex-direction: column;
+    width: 30em;
+        .but{
+            background-color: rgba(0, 0, 14, 0.76);
+            color: white;
+        }
+}
+
+.bossinp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .inp{
+        width: 49%;
+    }
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+        cursor: pointer;
+        width: 6em;
+        height: 6em;
+    }
+}
+
+@media (min-width: 200px){
+    .formfield{
+        width: 16em;
+    }
+    .title{
+        font-size: 9px;
+    }
+    .sign{
+        font-size: 9px;
+    }
+    .login{
+        font-size: 9px;
+    }
+}
+
+.foot{
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 400px){
+    .formfield{
+        width: 22em;
+        font-size: 14px;
+    }
+    .title{
+        font-size: 10px;
+    }
+    .sign{
+        font-size: 10px;
+    }
+    .login{
+        font-size: 10px;
+    }
+}
+
+
+@media (min-width: 600px){
+    .formfield{
+        width: 27em;
+        font-size: 16px;
+    }
+    .title{
+        font-size: 13px;
+    }
+    .sign{
+        font-size: 13px;
+    }
+    .login{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 800px){
+    .formfield{
+        width: 32em;
+        font-size: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .sign{
+        font-size: 18px;
+    }
+    .login{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1000px){
+    .formfield{
+        width: 35em;
+        font-size: 18px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .sign{
+        font-size: 18px;
+    }
+    .login{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,218 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mubeen",
+      "Email": "mohd@g.com",
+      "PhoneNumber": "08123456789",
+      "password": "asdfg",
+      "RRR": "11122233344"
+    },
+    {
+      "id": 2,
+      "name": "King",
+      "Email": "king@g.com",
+      "PhoneNumber": "08011223344",
+      "password": "jklp",
+      "RRR": "12345678901"
+    },
+    {
+      "name": "James",
+      "Email": "jjj@gmail.com",
+      "PhoneNumber": "08011223344",
+      "password": "jklp",
+      "RRR": "09876543210",
+      "id": 3
+    },
+    {
+      "name": " mubeen",
+      "Email": "mohdmubeen137@gmail.com",
+      "PhoneNumber": "08165931631",
+      "password": "mubeen02",
+      "RRR": "123456765432",
+      "id": 4
+    },
+    {
+      "name": "mking",
+      "Email": "mking@g.com",
+      "PhoneNumber": "mking@g.com",
+      "password": "kdkd",
+      "RRR": "49487292762780",
+      "id": 5
+    },
+    {
+      "name": "Moh Olawale",
+      "Email": "muhammad.s@comsoftltd.com",
+      "PhoneNumber": "08104734032",
+      "password": "admin",
+      "RRR": "789274553716666",
+      "id": 6
+    }
+  ],
+  "payment": [
+    {
+      "name": "Mub",
+      "email": "mub@y.com",
+      "RRR": "112233445561234",
+      "id": 1
+    },
+    {
+      "name": "Oga",
+      "email": "oga@g.com",
+      "RRR": "123456789876543",
+      "id": 2
+    },
+    {
+      "name": "Olawale Moh",
+      "email": "muhammad.s@comsoftltd.com",
+      "RRR": "789274553716666",
+      "id": 3
+    }
+  ],
+  "applicantData": [
+    {
+      "lastname": "mubeen",
+      "firstname": "king",
+      "serviceno": "",
+      "email": "mohdmubeen137@gmail.com",
+      "presentAddy": "this is the place ",
+      "permanentAddy": "that is the place",
+      "number1": "08036520667",
+      "number2": "08098784658",
+      "POB": "",
+      "DOB": "2020-03-18T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Kogi",
+      "LGA": "Okene",
+      "city": "ogavuda",
+      "religion": "islam",
+      "height": 1.67,
+      "id": 1
+    },
+    {
+      "lastname": "Abu",
+      "firstname": "Olawale Moh",
+      "serviceno": "",
+      "email": "muhammad.s@comsoftltd.com",
+      "presentAddy": "jahi district, off Next Cash and carry, Jahi Abuja",
+      "permanentAddy": "SAME",
+      "number1": "08104734032",
+      "number2": "",
+      "POB": "LAGOS",
+      "DOB": "1999-04-20T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Kwara",
+      "LGA": "Ifelodun",
+      "city": "Ilorin",
+      "religion": "islam",
+      "height": 1.78,
+      "id": 2
+    }
+  ],
+  "guardianData": [
+    {
+      "parentName1": "monkey",
+      "email1": "banana",
+      "number1": "monkey",
+      "relationship1": "banana",
+      "address1": "monkey",
+      "parentName2": "banana",
+      "email2": "monkey",
+      "number2": "banana",
+      "relationship2": "monkey",
+      "address2": "banana",
+      "id": 1
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@gmail.com",
+      "number1": "08032887010",
+      "relationship1": "Father",
+      "address1": "zone 6, Aso pure water, Dutse Alhaji, Abuja",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 2
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@g.com",
+      "number1": "08032887010",
+      "relationship1": "Father",
+      "address1": "zone 6, Dutse Alhaji",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 3
+    },
+    {
+      "parentName1": "Abu Sanni",
+      "email1": "NIL",
+      "number1": "08053466245",
+      "relationship1": "Father",
+      "address1": "Zone B, karimu west Ilorin",
+      "parentName2": "Darisu Hambali",
+      "email2": "NIL",
+      "number2": "09773663883",
+      "relationship2": "Sister",
+      "address2": "Zone B, karimu west Ilorin",
+      "id": 4
+    }
+  ],
+  "choices": [
+    {
+      "firstchoice": "NIGERIAN NAVY",
+      "secondchoice": "NIGERIAN ARMY",
+      "faculty": "Faculty of Arts and Social Sciences",
+      "department": "Political Science and International Relations",
+      "course": "BSc. Political Science and International Relations",
+      "id": 3
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN AIRFORCE",
+      "faculty": "Faculty of Science",
+      "department": "Chemistry",
+      "course": "BSc. Chemistry",
+      "id": 7
+    },
+    {
+      "firstchoice": "NIGERIAN AIRFORCE",
+      "secondchoice": "NIGERIAN ARMY",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Security and Intelligence Science",
+      "course": "BSc. Security and Intelligence Science",
+      "id": 8
+    }
+  ],
+  "jambdetail": [
+    {
+      "regno": "452798430gf",
+      "examno": "987989877998",
+      "year": "2019",
+      "id": 1
+    },
+    {
+      "regno": "",
+      "examno": "",
+      "year": "2020",
+      "id": 2
+    },
+    {
+      "regno": "",
+      "examno": "",
+      "year": "2020",
+      "id": 3
+    },
+    {
+      "regno": "NG037538854",
+      "examno": "",
+      "year": "2020",
+      "id": 4
+    }
+  ]
+}

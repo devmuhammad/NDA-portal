@@ -1,0 +1,429 @@
+&nbsp;
+&nbsp;
+<div style="color:rgba(0, 0, 14, 0.76); font-weight:600">Input the schools attended and click add! <sup>*</sup><div><br>
+&nbsp;
+&nbsp;
+<mat-card>
+  <div  class="flex-el">
+    <mat-form-field appearance="outline" class="inp2">
+        <mat-label>Name of School</mat-label>        
+        <input matInput [(ngModel)]="name">&nbsp;
+    </mat-form-field>
+
+    <mat-form-field appearance="outline"  class="inp2">
+        <mat-label>School Type</mat-label>
+        <mat-select [(ngModel)]="school">
+          <mat-option value="">-Select School Type-</mat-option>
+          <mat-option value="Primary">Primary</mat-option>
+          <mat-option value="Secondary">Secondary</mat-option>
+          <mat-option value="Higher Institution">Higher Institutions</mat-option>
+        </mat-select>&nbsp;
+    </mat-form-field>
+
+    <mat-form-field appearance="outline"  class="inp2">
+      <mat-label>State/Town</mat-label>
+      <input matInput [(ngModel)]="state">&nbsp;
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="inp2">
+      <mat-label>From:</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="from" name="dob" >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="inp2">
+        <mat-label>To:</mat-label>
+        <input matInput [matDatepicker]="picker1" [(ngModel)]="to" name="dob" >
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-icon (click)="addElement()" style="color: rgba(0, 0, 14, 0.76); cursor: pointer;">add_circle</mat-icon>
+    &nbsp;
+    <br>
+  </div>
+  &nbsp;
+  <div class="flex-el2">
+    <mat-table #table [dataSource]="dataSource">    
+      <ng-container matColumnDef="schoolname">
+        <mat-header-cell *matHeaderCellDef> Name of Schools </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.schoolname}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="schooltype">
+        <mat-header-cell *matHeaderCellDef> School type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.schooltype}} </mat-cell>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="schoolstate">
+        <mat-header-cell *matHeaderCellDef> State/Town </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.schoolstate}} </mat-cell>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="datefrom">
+        <mat-header-cell *matHeaderCellDef> From </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.datefrom | date}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="dateto">
+        <mat-header-cell *matHeaderCellDef> To </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dateto | date}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="del">
+          <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+          <mat-cell (click)="deleteItem(element)" *matCellDef="let element"> 
+              <mat-icon  style="color: red; cursor: pointer;" >delete_sweep</mat-icon>
+          </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</mat-card>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<div style="color:rgba(0, 0, 14, 0.76); font-weight:600">Enter the qualifications obtained <sup>*</sup>  </div><br>
+<div class="flex-el">
+  <!-- <p> JAMB REG NO. <sup>*</sup> </p> -->
+  <mat-form-field class="inp2" appearance="outline" floatLabel="never">
+    <mat-label> JAMB Reg No. </mat-label>
+    <input matInput [(ngModel)]="jamb.regno">
+  </mat-form-field>
+
+  <!-- <p> JAMB EXAM NO. </p> -->
+  <mat-form-field class="inp2" appearance="outline" floatLabel="never">
+    <mat-label> JAMB Exam No. </mat-label>
+    <input matInput [(ngModel)]="jamb.examno">
+  </mat-form-field>
+
+  <!-- <p> Year </p> -->
+  <mat-form-field appearance="outline" class="inp2" style="width: 15em;"> 
+    <mat-label> Year: </mat-label>
+    <mat-select [(ngModel)]="jamb.year" >
+      <mat-option value="2020">2020</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+&nbsp;
+&nbsp;
+<div style="color: rgba(0, 0, 14, 0.76); font-weight: 600;">You must fill at least one of the exam below with the full list of the result</div>
+&nbsp;
+&nbsp;
+<div>
+    <mat-radio-group color = "primary" (change)="selectedSitting($event)">
+      <mat-label style="font-weight: 400;"> Select the number of Qualifications you want to use: <sup>*</sup> </mat-label><br><br><br>
+      <mat-radio-button checked class="quest" value="onesitting"> 1 Sitting</mat-radio-button>&nbsp;
+      <mat-radio-button class="quest" value="twositting"> 2 Sittings</mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<div class="container">
+  <mat-card class="card1">  
+    <div style="color: rgba(0, 0, 14, 0.76);">1st Sitting: <sup>*</sup> </div><br>
+    <mat-form-field appearance="outline"  class="inp2">
+      <mat-label>Exam Type</mat-label>
+      <mat-select [(ngModel)]="Exam">
+        <mat-option value="">-Select Exam Type-</mat-option>
+        <mat-option value="SSCE (School Cert)">SSCE (School Cert)</mat-option>
+        <mat-option value="SSCE (Private)">SSCE (Private)</mat-option>
+        <mat-option value="NECO">NECO</mat-option>
+        <mat-option value="NABTEB">NABTEB</mat-option>
+        <mat-option value="NBAIS">NBAIS</mat-option>
+      </mat-select>&nbsp;
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="inp2">
+      <mat-label>Exam Center</mat-label>
+      <input matInput [(ngModel)]="center">&nbsp;
+    </mat-form-field>
+
+    <div class="flex-el3">
+      <mat-form-field appearance="outline" class="inp3">
+        <mat-label>Exam Candidate Number</mat-label>
+        <input matInput [(ngModel)]="candidate" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="inp4" >
+        <mat-label>Year:</mat-label>
+        <mat-select >
+          <mat-option *ngFor="let year of years" [value]="year"> {{year}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div><br>
+
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <div class="flex-el">
+      <mat-form-field appearance="outline" class="inp2">
+        <mat-label>Subject</mat-label>
+        <mat-select [(ngModel)]= "subject">
+          <mat-option value="">-Select Subject-</mat-option>
+          <mat-option value="English Language">English Language</mat-option>
+          <mat-option value="Mathematics">Mathematics</mat-option>
+          <mat-option value="Biology">Biology</mat-option>
+          <mat-option value="Chemistry">Chemistry</mat-option>
+          <mat-option value="Physics">Physics</mat-option>
+          <mat-option value="Agric Science">Agric Science </mat-option>
+          <mat-option value="Geography">Geography</mat-option>
+          <mat-option value="Health Science">Health Science</mat-option>
+          <mat-option value="Further Mathematics">Further Mathematics</mat-option>
+          <mat-option value="Technical Drawing">Technical Drawing</mat-option>
+          <mat-option value="Physical Education">Physical Education</mat-option>
+          <mat-option value="Economics">Economics</mat-option>
+          <mat-option value="Accounts">Accounts</mat-option>
+          <mat-option value="Commerce">Commerce</mat-option>
+          <mat-option value="Government">Government</mat-option>
+          <mat-option value="HistoryHistory">History</mat-option>
+          <mat-option value="French">French</mat-option>
+          <mat-option value="Arabic">Arabic</mat-option>
+          <mat-option value="Yoruba Language">Yoruba Language</mat-option>
+          <mat-option value="Igbo Language">Igbo Language</mat-option>
+          <mat-option value="Hausa Language">Hausa Language</mat-option>
+          <mat-option value="Christian Religious Studies">Christian Religious Studies</mat-option>
+          <mat-option value="Islamic Religious knowledge">Islamic Religious knowledge</mat-option>
+          <mat-option value="Visual/Fine art">Visual/Fine art</mat-option>
+          <mat-option value="Music">Music</mat-option>
+          <mat-option value="English Literature">English Literature</mat-option>
+          <mat-option value="Computer">Computer</mat-option>
+          <mat-option value="Home Management">Home Management</mat-option>
+          <mat-option value="Civic Education">Civic Education</mat-option>
+          <mat-option value="Office Practice">Office Practice</mat-option>
+          <mat-option value="Metal work">Metal work</mat-option>
+          <mat-option value="Store Management">Store Management</mat-option>
+          <mat-option value="Basic Electricity">Basic Electricity</mat-option>
+          <mat-option value="Electronics">Electronics</mat-option>
+          <mat-option value="Auto Mechanics">Auto Mechanics</mat-option>
+          <mat-option value="Building Constructions">Building Constructions</mat-option>
+          <mat-option value="Wood Work">Wood Work</mat-option>
+          <mat-option value="Food and Nutrition">Food and Nutrition</mat-option>
+          <mat-option value="Clothing and Textile">Clothing and Textile</mat-option>
+          <mat-option value="Insurance">Insurance</mat-option>
+          <mat-option value="Building and Engineering Drawing">Building and Engineering Drawing</mat-option>
+          <mat-option value="Electronic Eng. and Basic Electricity">Electronic Eng. and Basic Electricity</mat-option>
+          <mat-option value="Data Processing">Data Processing</mat-option>
+          <mat-option value="Book Keeping">Book Keeping</mat-option>
+          <mat-option value="Marketing">Marketing</mat-option>
+          <mat-option value="Animal Husbandry">Animal Husbandry</mat-option>
+          <mat-option value="Mandarin">Mandarin</mat-option>
+          <mat-option value="Statistics">Statistics</mat-option>
+          <mat-option value="Business Method">Business Method</mat-option>
+          <mat-option value="Catering Craft">Catering Craft</mat-option>
+          <mat-option value="Tourism">Tourism</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="inp2">
+        <mat-label>Grade</mat-label>
+        <mat-select [(ngModel)]= "grade">
+          <mat-option value="">-Select Grade-</mat-option>
+          <mat-option value="A">A</mat-option>
+          <mat-option value="A1">A1</mat-option>
+          <mat-option value="A2">A2</mat-option>
+          <mat-option value="A3">A3</mat-option>
+          <mat-option value="B">B</mat-option>
+          <mat-option value="B2">B2</mat-option>
+          <mat-option value="B3">B3</mat-option>
+          <mat-option value="C">C</mat-option>
+          <mat-option value="C4">C4</mat-option>
+          <mat-option value="C5">C5</mat-option>
+          <mat-option value="C6">C6</mat-option>
+          <mat-option value="D7">D7</mat-option>
+          <mat-option value="D8">D8</mat-option>
+          <mat-option value="E8">E8</mat-option>
+          <mat-option value="F9">F9</mat-option>
+          <mat-option value="P7">P7</mat-option>
+          <mat-option value="P8">P8</mat-option>
+          <mat-option value="P9">P9</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-icon (click)="addData()" style="color: rgba(0, 0, 14, 0.76); cursor: pointer;">add_circle</mat-icon>
+    </div>
+
+    <div>
+      <mat-table #table [dataSource]="resultGrade">
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="title">
+          <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{data.title}} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> Grade </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{data.position}} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="del">
+            <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell (click)="deletePost(data)" *matCellDef="let data"> 
+                <mat-icon  style="color: red; cursor: pointer;" >delete_sweep</mat-icon>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedData"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedData;"></mat-row>
+      </mat-table>
+    </div>
+  </mat-card>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+  <mat-card  class="card2">
+    <div style="color: rgba(0, 0, 14, 0.76);">2nd Sitting: </div><br>
+    <mat-form-field appearance="outline" class="inp2">
+      <mat-label>Exam Type</mat-label>
+      <mat-select [(ngModel)]="Exam2" [disabled]="two == 'onesitting'" >
+        <mat-option value="">-Select Exam Type-</mat-option>
+        <mat-option value="SSCE (School Cert)">SSCE (School Cert)</mat-option>
+        <mat-option value="SSCE (Private)">SSCE (Private)</mat-option>
+        <mat-option value="NECO">NECO</mat-option>
+        <mat-option value="NABTEB">NABTEB</mat-option>
+        <mat-option value="NBAIS">NBAIS</mat-option>
+      </mat-select>&nbsp;
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="inp2">
+      <mat-label>Exam Center</mat-label>
+      <input matInput [(ngModel)]="center2" [disabled]="two == 'onesitting'">&nbsp;
+    </mat-form-field>
+
+    <div class="flex-el3">
+      <mat-form-field appearance="outline" class="inp3">
+        <mat-label>Exam Candidate Number</mat-label>
+        <input matInput [(ngModel)]="candidate2"  [disabled]="two == 'onesitting'" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline"  class="inp4">
+        <mat-label>Year:</mat-label>
+        <mat-select [disabled]="two == 'onesitting' ">
+          <mat-option *ngFor="let year of years" [value]="year"> {{year}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div><br>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <div class="flex-el">
+      <mat-form-field appearance="outline"  class="inp2">
+        <mat-label>Subject</mat-label>
+        <mat-select [disabled]="two == 'onesitting'" [(ngModel)] = "subject2">
+      <mat-option value="">-Select Subject-</mat-option>
+      <mat-option value="English Language">English Language</mat-option>
+      <mat-option value="Mathematics">Mathematics</mat-option>
+      <mat-option value="Biology">Biology</mat-option>
+      <mat-option value="Chemistry">Chemistry</mat-option>
+      <mat-option value="Physics">Physics</mat-option>
+      <mat-option value="Agric Science">Agric Science </mat-option>
+      <mat-option value="Geography">Geography</mat-option>
+      <mat-option value="Health Science">Health Science</mat-option>
+      <mat-option value="Further Mathematics">Further Mathematics</mat-option>
+      <mat-option value="Technical Drawing">Technical Drawing</mat-option>
+      <mat-option value="Physical Education">Physical Education</mat-option>
+      <mat-option value="Economics">Economics</mat-option>
+      <mat-option value="Accounts">Accounts</mat-option>
+      <mat-option value="Commerce">Commerce</mat-option>
+      <mat-option value="Government">Government</mat-option>
+      <mat-option value="HistoryHistory">History</mat-option>
+      <mat-option value="French">French</mat-option>
+      <mat-option value="Arabic">Arabic</mat-option>
+      <mat-option value="Yoruba Language">Yoruba Language</mat-option>
+      <mat-option value="Igbo Language">Igbo Language</mat-option>
+      <mat-option value="Hausa Language">Hausa Language</mat-option>
+      <mat-option value="Christian Religious Studies">Christian Religious Studies</mat-option>
+      <mat-option value="Islamic Religious knowledge">Islamic Religious knowledge</mat-option>
+      <mat-option value="Visual/Fine art">Visual/Fine art</mat-option>
+      <mat-option value="Music">Music</mat-option>
+      <mat-option value="English Literature">English Literature</mat-option>
+      <mat-option value="Computer">Computer</mat-option>
+      <mat-option value="Home Management">Home Management</mat-option>
+      <mat-option value="Civic Education">Civic Education</mat-option>
+      <mat-option value="Office Practice">Office Practice</mat-option>
+      <mat-option value="Metal work">Metal work</mat-option>
+      <mat-option value="Store Management">Store Management</mat-option>
+      <mat-option value="Basic Electricity">Basic Electricity</mat-option>
+      <mat-option value="Electronics">Electronics</mat-option>
+      <mat-option value="Auto Mechanics">Auto Mechanics</mat-option>
+      <mat-option value="Building Constructions">Building Constructions</mat-option>
+      <mat-option value="Wood Work">Wood Work</mat-option>
+      <mat-option value="Food and Nutrition">Food and Nutrition</mat-option>
+      <mat-option value="Clothing and Textile">Clothing and Textile</mat-option>
+      <mat-option value="Insurance">Insurance</mat-option>
+      <mat-option value="Building and Engineering Drawing">Building and Engineering Drawing</mat-option>
+      <mat-option value="Electronic Eng. and Basic Electricity">Electronic Eng. and Basic Electricity</mat-option>
+      <mat-option value="Data Processing">Data Processing</mat-option>
+      <mat-option value="Book Keeping">Book Keeping</mat-option>
+      <mat-option value="Marketing">Marketing</mat-option>
+      <mat-option value="Animal Husbandry">Animal Husbandry</mat-option>
+      <mat-option value="Mandarin">Mandarin</mat-option>
+      <mat-option value="Statistics">Statistics</mat-option>
+      <mat-option value="Business Method">Business Method</mat-option>
+      <mat-option value="Catering Craft">Catering Craft</mat-option>
+      <mat-option value="Tourism">Tourism</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline"  class="inp2">
+        <mat-label>Grade</mat-label>
+        <mat-select [disabled]="two == 'onesitting' " [(ngModel)] = "grade2">
+      <mat-option value="">-Select Grade-</mat-option>
+      <mat-option value="A">A</mat-option>
+      <mat-option value="A1">A1</mat-option>
+      <mat-option value="A2">A2</mat-option>
+      <mat-option value="A3">A3</mat-option>
+      <mat-option value="B">B</mat-option>
+      <mat-option value="B2">B2</mat-option>
+      <mat-option value="B3">B3</mat-option>
+      <mat-option value="C">C</mat-option>
+      <mat-option value="C4">C4</mat-option>
+      <mat-option value="C5">C5</mat-option>
+      <mat-option value="C6">C6</mat-option>
+      <mat-option value="D7">D7</mat-option>
+      <mat-option value="D8">D8</mat-option>
+      <mat-option value="E8">E8</mat-option>
+      <mat-option value="F9">F9</mat-option>
+      <mat-option value="P7">P7</mat-option>
+      <mat-option value="P8">P8</mat-option>
+      <mat-option value="P9">P9</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-icon (click)= "addData2()" style="color: rgba(0, 0, 14, 0.76); cursor: pointer;">add_circle</mat-icon>
+    </div>
+
+    <div> 
+      <mat-table #table [dataSource]="resultGrade2">
+        <ng-container matColumnDef="title2">
+          <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{data.title2}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="position2">
+          <mat-header-cell *matHeaderCellDef> Grade </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{data.position2}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="del">
+          <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+          <mat-cell (click)="deletePost2(data)" *matCellDef="let data"> 
+            <mat-icon  style="color: red; cursor: pointer;" >delete_sweep</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedData2"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedData2;"></mat-row>
+      </mat-table>
+    </div>
+  </mat-card>
+</div>
+
+&nbsp;
+<button mat-button (click)="submit()">Save</button>&nbsp;

@@ -1,0 +1,134 @@
+footer{
+    margin-top: 5em;
+    display: flex;
+    background: rgba(0, 0, 14, 0.76);
+    height: 17em;
+    // background-size: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    // align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.tweet{
+    width: 25px;
+    height: 20px;
+}
+
+.footer{
+    // align-self: center;
+    display: flex;  
+    color: white;
+    // position: absolute;
+    // bottom: auto;
+    text-decoration: none;
+    // width: 100%;
+    justify-content: center;
+    justify-self: center;
+}
+
+#ft{
+    padding: 5px 5px 5px 5px;
+    // width: 15em;
+    justify-content: space-evenly;
+}
+
+#footer{
+    justify-content: left;
+}
+
+#btlogo{
+    padding-top: 1.5em;
+    // padding-left: 2em;
+    width: 7em;
+    height: 7em;
+}
+
+// // #comsoft{
+// //     color: white;
+// //     justify-content: right;
+// //     align-items: flex-end;
+// // }
+
+a{
+    text-decoration: none;
+    color: rgb(18, 252, 88);
+    cursor: pointer;
+}
+
+footer a{
+    color: white;
+}
+
+a:hover{
+    color: red;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+
+    // position: absolute;
+}
+.comsoft{
+    // text-align: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-top: 100px;
+}
+
+@media (min-width:100px){
+    footer{
+        font-size: 8px;
+    }
+    .logofoot{
+        padding: 5px 5px 5px 5px;
+    }
+    #btlogo{
+        padding-left: 5px;
+    }
+}
+
+@media (min-width:300px){
+    footer{
+        font-size: 12px;
+    }
+    .logofoot{
+        padding: 10px 10px 10px 10px;
+        
+    }
+    #btlogo{
+        padding-left: 10px;
+    }
+}
+
+@media (min-width:800px){
+    footer{
+        font-size: 18px;
+    }
+    .logofoot{
+        padding: 15px 15px 15px 15px;
+        
+    }
+    #btlogo{
+        padding-left: 50px;
+    }
+}
+
+@media (min-width:1000px){
+    footer{
+        font-size: 1em;
+    }
+    .logofoot{
+        padding: 20px 20px 20px 20px;
+        
+    }
+    #btlogo{
+        padding-left: 100px;
+    }
+}

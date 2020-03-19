@@ -1,0 +1,43 @@
+
+<div class="form">
+    <mat-card class="formfield">  
+        <div class="title">
+            <img routerLink="/" alt="home" src="\assets\images\download2.png">
+            <span>
+                <h2 style="font-family: sans-serif;">Nigerian Defence Academy</h2>
+                <h3 style="color: red; font-family: sans-serif; padding-left: 10px;">NDA Regular Course Application</h3>
+            </span>
+        </div>
+        <h3 style="margin-top: 5px; margin-bottom: 5px;">Purchase Access Code</h3>
+        <mat-form-field appearance="outline">
+            <mat-label> Payer Name: </mat-label>
+            <input matInput type="text" [(ngModel)] ="purchaseData.name" >
+        </mat-form-field>
+      <div class="bossinp">
+        <mat-form-field appearance="outline" class="inp">
+            <mat-label> Payer Email: </mat-label>
+            <input matInput type="email" [(ngModel)] ="purchaseData.email">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="inp">
+            <mat-label> Confirm Email: </mat-label>
+            <input matInput type="email" [(ngModel)] ="purchaseData.confirmEmail">
+        </mat-form-field>
+      </div>
+        <div style="color: blue; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
+        <mat-form-field appearance="outline">
+            <mat-label> Payer Phone: </mat-label>
+            <input matInput type="tel" [(ngModel)] ="purchaseData.number">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label> Amount: </mat-label>
+            <input matInput type="number" value ="3500" id="amount" (change)='generaterrr()' disabled >
+        </mat-form-field>
+        <button mat-button (click)="pinPurchase()" class="but" type="submit" value="submit" >Next</button>
+        <p class="sign" style="margin: 10px;">Click <a routerLink='/signup'><i style="color: red;">here</i></a> to Sign-up after Purchase</p>
+        <p class="login" style="margin: 10px;">Already have an account?<a routerLink='/login'><i>Login</i></a> </p>
+    </mat-card>
+</div>
+
+<div class="foot" style="padding: 36px 0 0 0;">
+    <app-footerapp></app-footerapp>
+</div>

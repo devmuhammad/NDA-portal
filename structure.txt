@@ -1,0 +1,26 @@
+home/landing page
+
+nav page and footer for application
+
+login page 
+
+signup page
+
+about us
+
+rrr purchase page
+
+forget password page
+
+		user side
+
+form page
+
+portal
+
+nav page and footer for users after login
+
+		server side 
+backend.json file
+
+

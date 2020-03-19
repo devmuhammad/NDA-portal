@@ -1,0 +1,94 @@
+.logo{
+    display: flex;
+    background-color: rgba(0, 0, 14, 0.76);
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    img{
+        width: 4em;
+        height: 4em;
+        padding-left: 2em;
+        padding-right: 4px;
+        padding-top: 10px;
+    }
+}
+
+.head{
+    margin: 2em 0 20px 0px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.nav{
+    margin: 0 auto;
+    justify-content: space-evenly;
+    // align-content: center;
+    align-self: center;
+
+    span{
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+#navmenu{
+    font-size: 15px;
+    padding-left: 5em;
+}
+
+.download{
+    position: relative;
+    display: inline-block;
+    cursor: context-menu;
+}
+.logup{
+   display: flex;
+   justify-content: space-evenly;
+   color: white; 
+   padding-right: 20px;    
+
+}
+
+.logout{
+    cursor:pointer;
+    color: white;
+    margin-top: 13px;
+
+}
+
+@media (min-width:100px){
+    
+    .logo{
+        font-size: 8px;
+    }
+}
+
+@media (min-width:300px){
+   
+    .logo{
+        font-size: 12px;
+    }
+}
+
+@media (min-width:800px){
+    .logo{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:1000px){
+    .logo{
+        font-size: 1em;
+    }
+}

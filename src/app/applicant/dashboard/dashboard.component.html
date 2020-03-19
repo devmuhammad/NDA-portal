@@ -1,0 +1,11 @@
+<app-navapp></app-navapp>
+<button mat-fab style="font-size: x-large;" [matMenuTriggerFor]="menu">M</button>
+<mat-menu #menu="matMenu">
+    <div class="accountmenu">
+        <p> Hi! {{loggedInUser.name | titlecase}}</p>
+        <p>{{loggedInUser.Email}}</p>
+        <a href="\assets\Advertfor72RC.pdf ">Advertisement</a>
+        <a href="\assets\Requirements72RC.pdf">Requirements</a>
+        <button mat-raised-button routerLink='/login'>Log out</button>
+    </div>
+</mat-menu>

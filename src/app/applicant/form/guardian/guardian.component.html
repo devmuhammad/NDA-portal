@@ -1,0 +1,99 @@
+<div class="form">
+  <div class="personal">
+    <div style=" color: rgba(0, 0, 14, 0.76); font-weight:600"> 1st Guardian Details</div>
+    &nbsp;
+    <i>Note: The same person's name you provided is expected to sign your attestation</i><br>
+    <div class="flex-el ">
+        <div class="left-el">  Parent / Guardian Name: <sup>*</sup> </div>
+          <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Guardian's name and surname</mat-hint>
+            <input matInput placeholder="John Doe" required [(ngModel)] = "guardianData.parentName1">
+          </mat-form-field>
+    </div>
+
+    <div class="flex-el ">
+        <div class="left-el"> Email: <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Guardian's email</mat-hint>
+            <input matInput="Email" required [(ngModel)] = "guardianData.email1">
+          </mat-form-field>
+    </div>
+
+    <div class="flex-el ">
+        <div class="left-el"> Guardian's Mobile No. <sup>*</sup> </div>
+          <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Guardian's number</mat-hint>
+            <input type="tel" matInput placeholder="0801 555 1234" required minlength="11" maxlength="11" [(ngModel)] = "guardianData.number1">
+          </mat-form-field>
+    </div>
+
+    <div class="flex-el">   
+        <div class="left-el"> Relationship: <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Relationship with Guardian</mat-hint>
+            <input matInput required [(ngModel)] = "guardianData.relationship1">
+          </mat-form-field>
+    </div>
+
+    <div class="flex-el2 ">
+        <div class="left-el"> Contact Address  <sup>*</sup></div>
+          <mat-form-field appearance="outline" class="inp2" floatLabel="never">
+            <mat-hint>Guardian's permanent address</mat-hint>
+            <textarea matInput required cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" [(ngModel)]= "guardianData.address1"></textarea>
+          </mat-form-field>
+    </div>
+
+    <div style=" color: rgba(0, 0, 14, 0.76); font-weight:600"> 2nd Guardian Details</div>
+    
+    &nbsp;
+    &nbsp;
+
+    <div class="flex-el ">
+      <div class="left-el">  Parent / Guardian Name: </div>
+        <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Guardian's name and surname</mat-hint>
+            <input matInput placeholder="John Doe" [(ngModel)] = "guardianData.parentName2">
+        </mat-form-field>
+    </div>
+
+    <div class="flex-el ">
+      <div class="left-el"> Email: </div>
+        <mat-form-field class="inp" appearance="outline" floatLabel="never">
+            <mat-hint>Guardian's email</mat-hint>
+            <input matInput="Email" [(ngModel)] = "guardianData.email2">
+        </mat-form-field>
+    </div>
+
+    <div class="flex-el ">
+      <div class="left-el"> Guardian's Mobile No. </div>
+        <mat-form-field class="inp" appearance="outline" floatLabel="never">
+          <mat-hint>Guardian's number</mat-hint>
+          <input type="tel" matInput placeholder="0801 555 1234" minlength="11" maxlength="11" [(ngModel)] = "guardianData.number2">
+        </mat-form-field>
+    </div>
+
+    <div class="flex-el">   
+      <div class="left-el"> Relationship: </div>
+        <mat-form-field class="inp" appearance="outline" floatLabel="never">
+          <mat-hint>Relationship with Guardian</mat-hint>
+          <input matInput  [(ngModel)] = "guardianData.relationship2">
+        </mat-form-field>
+    </div>
+
+    <div class="flex-el2 ">
+      <div class="left-el"> Contact Address </div>
+        <mat-form-field appearance="outline" class="inp2" floatLabel="never">
+          <mat-hint>Guardian's permanent address</mat-hint>
+          <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" [(ngModel)]= "guardianData.address2"></textarea>
+        </mat-form-field>
+    </div>
+  </div>
+</div>
+&nbsp;
+
+&nbsp;
+
+<div class="flex-end">
+  <button mat-button matStepperPrevious >Back</button> &nbsp;
+  <button mat-button matStepperNext (click)= "submit()">Next</button>
+</div>

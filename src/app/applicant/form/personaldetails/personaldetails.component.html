@@ -1,0 +1,175 @@
+&nbsp;
+&nbsp;
+<div class="work">
+  <div class="passport" (click)="passport.click()">
+    <img [src]="imgURL"  class="img" *ngIf="imgURL" >
+    <span style="color:red;" *ngIf="message">{{message}}</span>
+    <div style="color: red;">Click to upload passport photo</div>
+    <input #file type="file" accept='image/*' #passport hidden (change)="preview(file.files)"  required="true"/>
+  </div>
+</div>
+<!-- <h3>Angular 7 Image Preview before Upload:</h3>
+<span style="color:red;" *ngIf="message">{{message}}</span>
+<input #file type="file" accept='image/*' (change)="preview(file.files)" />
+<img [src]="imgURL" height="200" *ngIf="imgURL"> -->
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="form">
+  <div style="font-weight:600"><sup>* Indicates a required field</sup></div><br>
+  &nbsp;
+  <div style=" color: rgba(0, 0, 14, 0.76); font-weight:600">Applicant's Details</div>
+  &nbsp;
+  &nbsp;  
+    <div class="personal"> 
+
+      <div class="flex-el ">
+        <div class="left-el"> Last name: <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" >
+          <mat-hint>surname</mat-hint>
+            <input matInput placeholder="Doe" required [(ngModel)] = "personalData.lastname">
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el ">
+        <div class="left-el"> Other Names: <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>others</mat-hint>
+            <input matInput placeholder="John" required [(ngModel)] = "personalData.firstname">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-el ">
+        <div class="left-el"> Service Number <br><sub>(for service personnel only)</sub></div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>service no.</mat-hint>
+            <input matInput [(ngModel)] = "personalData.serviceno">
+          </mat-form-field>
+      </div>
+      
+      <div class="flex-el ">
+        <div class="left-el"> Applicant Email <sup>*</sup> </div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>email</mat-hint>
+            <input matInput placeholder="example@something.com" required [(ngModel)] = "personalData.email">
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el2">
+        <div class="left-el"> Present Address  <sup>*</sup></div>
+          <mat-form-field appearance="outline" class="inp2" >
+            <mat-hint>Temporary residence</mat-hint>
+            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" required [(ngModel)] = "personalData.presentAddy"></textarea>
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el2">
+        <div class="left-el"> Permanent Address  <sup>*</sup></div>
+          <mat-form-field appearance="outline" class="inp2" >
+            <mat-hint>Permanent residence</mat-hint>
+            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" required [(ngModel)] = "personalData.permanentAddy"></textarea>
+          </mat-form-field>
+      </div>
+  
+      <div class="flex-el ">
+        <div class="left-el"> Applicant Mobile <sup>*</sup> </div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>Phone number 1</mat-hint>
+            <input type="tel" matInput placeholder="0801 555 1234" required minlength="11" maxlength="11" [(ngModel)] = "personalData.number1">
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el ">
+        <div class="left-el"> Applicant Mobile </div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>Phone number 2</mat-hint>
+            <input type="tel" matInput placeholder="0801-555-1234" [(ngModel)] = "personalData.number2">
+          </mat-form-field>
+      </div>
+        
+      <div class="flex-el ">
+        <div class="left-el"> Place of Birth <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>birth place</mat-hint>
+            <input matInput required [(ngModel)] = "personalData.POB">
+          </mat-form-field>
+      </div>
+  
+      <div class="flex-el ">
+        <div class="left-el"> Date of Birth <sup>*</sup> </div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>birthday</mat-hint>
+            <input matInput [matDatepicker]="picker" name="dob" placeholder="Choose your date of birth"
+            required [(ngModel)] = "personalData.DOB">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el">
+        <div class="left-el"> Gender <sup>*</sup> </div>  
+          <mat-radio-group class="inp"  required [(ngModel)] = "personalData.gender">
+            <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+            <mat-radio-button value="female">Female</mat-radio-button>
+          </mat-radio-group>
+      </div>  
+
+      <div class="flex-el">
+        <div class="left-el"> State of Origin <sup>*</sup> </div>
+          <mat-form-field  class="inp" appearance="outline">  
+            <mat-hint>state of origin</mat-hint>      
+            <mat-select placeholder="Select State of Origin" (selectionChange)="selectedState($event.value)"
+            required [(ngModel)] = "personalData.SOG">
+              <mat-option *ngFor="let state of states" [value]="state.state.name">{{state.state.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div class="flex-el">
+        <div class="left-el"> LGA <sup>*</sup> </div>
+          <mat-form-field  class="inp" appearance="outline"> 
+            <mat-hint>L.G.A.</mat-hint>       
+            <mat-select placeholder="Select LGA" required [(ngModel)] = "personalData.LGA" >
+              <mat-option *ngIf="!lga"> Select State</mat-option>
+              <mat-option *ngFor="let local of lga" [value]="local.name">{{local.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+  
+      <div class="flex-el">
+          <div class="left-el"> City <sup>*</sup></div>
+            <mat-form-field class="inp" appearance="outline" >
+              <mat-hint>city or village</mat-hint>
+              <input matInput placeholder="City" required [(ngModel)] = "personalData.city">
+            </mat-form-field>
+      </div> 
+
+      <div class="flex-el">
+        <div class="left-el"> Religion <sup>*</sup> </div>
+          <mat-form-field  class="inp" appearance="outline">    
+            <mat-hint>religion</mat-hint>    
+            <mat-select  required [(ngModel)] = "personalData.religion">
+              <mat-option value="christianity">Christianity</mat-option>
+              <mat-option value="islam">Islam</mat-option>
+              <mat-option value="others">Others</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+        
+      <div class="flex-el">
+        <div class="left-el"> Height <sup>*</sup></div>
+          <mat-form-field class="inp" appearance="outline" >
+            <mat-hint>in meters</mat-hint>
+            <input matInput type="number" placeholder="1.1" required [(ngModel)] = "personalData.height">
+          </mat-form-field>
+      </div> 
+    </div>
+
+  </div>
+
+  &nbsp;
+  <div class="flex-end">
+    <button mat-button matStepperNext (click)="submit()">Next</button>
+  </div>
+  
+  

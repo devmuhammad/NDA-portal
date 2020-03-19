@@ -1,0 +1,21 @@
+.choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ip2{
+    width: 30%;
+}
+button{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 19px;
+    background: rgba(0, 0, 14, 0.76);
+    color: white;
+}
+sup{
+    color: red;
+}

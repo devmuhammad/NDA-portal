@@ -1,0 +1,161 @@
+.form{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.personal{
+  display: grid;
+  width: 85%;
+  grid-template-columns: 45% 45%;
+  gap: 30px 30px;
+  padding: 10px;
+}
+
+.flex-end{
+  float: right;
+  color: white;
+}
+
+button{
+  background: rgba(0, 0, 14, 0.76);
+  color: white;
+}
+
+.work{
+  float: right;
+    .passport{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.flex-el{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .inp{
+      width: 58%;
+      padding: 0 20px 0 20px    ;
+  }
+  .flex-el2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .inp2{
+    width: 80%;
+    margin: 0 1em 0 1em;
+  }
+    
+  .left-el{
+    flex-direction: row;
+  }
+  
+  select{
+    border-radius: 5px;
+    word-wrap: normal;
+    border-color: #d1d7dc;
+    padding: 9.5px;
+  }
+  
+  sup{
+    color: red;
+    font-weight: 600;
+  }
+  @media (min-width: 200px){
+    .form{
+      font-size: 8px;
+    }
+    .passport{
+      width: 2em;
+      height: 2em;
+    }
+    .img{
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  @media (min-width: 400px){
+    .form{
+      font-size: 10px;
+    }
+    .passport{
+      width: 5em;
+      height: 5em;
+    }
+    .img{
+      width: 5em;
+      height: 5em;
+    }
+  }
+
+  @media (min-width: 600px){
+    .form{
+      font-size: 12px;
+    }
+    .passport{
+      width: 8em;
+      height: 8em;
+    }
+    .img{
+      width: 8em;
+      height: 8em;
+    }
+  }
+
+  @media (min-width: 800px){
+    .form{
+      font-size: 14px;
+    }
+    .passport{
+      width: 10em;
+      height: 10em;
+    }
+    .img{
+      height: 10em; 
+      width: 10em;
+    }
+  }
+
+  @media (min-width: 1000px){
+    .form{
+      font-size: 16px;
+    }
+    .passport{
+      width: 12.5em;
+      height: 12.5em;
+    }
+    .img{
+      height: 12.5em; 
+      width: 12.5em;
+    }
+  }
+  
+  
+  @-webkit-keyframes autofill {
+  to {
+  color: #666;
+  background: transparent; } }
+  
+  @keyframes autofill {
+  to {
+  color: #666;
+  background: transparent; } }
+  
+  input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  

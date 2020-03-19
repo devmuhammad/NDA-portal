@@ -1,0 +1,100 @@
+<body >
+  <div id ="printElem">  
+    <div class="title">
+        <img class="logo" src="\assets\images\download2.png" alt="logo">
+        <div style="text-align: center;">
+            <h2>NIGERIAN DEFENCE ACADEMY KADUNA</h2>
+            <h3 >ACKNOWLEDGEMENT FORM (72 RC)</h3>
+        </div>
+    </div>
+    &nbsp;
+    <mat-divider></mat-divider>
+    <div class="work">   
+        <img class="passport" src= {{image}} alt="passport">
+    </div>
+    &nbsp;
+    <div>
+        <div class="grid">
+            <p>Name:</p>
+            <div style="display: flex; align-items: center;">
+                {{loggedInDetails.lastname}} {{loggedInDetails.firstname}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Address:</p>
+            <div style="display: flex; align-items: center;">
+                {{loggedInDetails.presentAddy}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Email Address:</p>
+            <div style="display: flex; align-items: center;">
+                {{loggedInDetails.email}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>State of Origin:</p>
+            <div style="display: flex; align-items: center;">
+                {{loggedInDetails.SOG}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Faculty:</p>
+            <div style="display: flex; align-items: center;">
+                {{choicemade.faculty}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Course of Study:</p>
+            <div style="display: flex; align-items: center;">
+                {{choicemade.course}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Date of Birth:</p>
+            <div style="display: flex; align-items: center;">
+                {{loggedInDetails.DOB | date}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Choice of Service:</p>
+            <div style="display: flex; align-items: center;">
+               <p>First Choice: {{choicemade.firstchoice}}</p> &nbsp; <br> &nbsp;
+               <p>Second Choice: {{choicemade.secondchoice}}</p>
+            </div>
+        </div>
+    </div>
+    &nbsp;
+
+    <h3>SCREENING TEST DETAILS</h3>
+    <mat-divider></mat-divider>
+    &nbsp;
+    <div>
+        <div class="grid">
+            <p>NDA Application No.</p>
+            <div style="display: flex; align-items: center;">
+                {{applicantno}}
+            </div>
+        </div>
+        <div class="grid">
+            <p>Jamb Reg No.</p>
+            <div style="display: flex; align-items: center;">
+                {{jambDetail.regno}}
+            </div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    &nbsp;
+    <p><b>NOTE:</b>  You are required to bring along this <b>Acknowledgment Form, JAMB result slip</b> and <b>TWO
+        (2) postcard size (3.5 x 5 inches) photographs</b> to the Screening Centre on the screening date.
+        The photographs should show only <b>from the chest upwards</b> and should contain the candidate’s
+        Name, State of Origin, Screening Centre, JAMB Reg. Number, Course of Study and Signature at
+        the back. Only candidates who make the <b>JAMB cut-off mark</b> as set by NDA would be required to
+        print out the <b>Screening Test Admission Card.</b> Successful candidates at the NDA Screening will
+        subsequently be invited for the <b>Armed Forces Selection Board</b> following which the list of admitted
+        candidates will be published in the Newspaper.
+    </p>
+  </div>
+    <button mat-button (click)="print()">Print</button>
+    
+</body>
