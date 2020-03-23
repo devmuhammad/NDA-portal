@@ -84,8 +84,10 @@ export class SignupComponent implements OnInit {
     alert('SUCCESSFULL') 
     console.log(this.payload); 
     this.signUpData = { "name": "", "Email": "", "PhoneNumber":"", "password": "", "confirmPassword": "", "RRR":""}
-    window.location.href= "/login"
-    })
+    localStorage.setItem("userData", JSON.stringify(this.payload))
+    // window.location.href= "/lo"
+    window.location.href = "/app/form"
+  })
   }
 
 

@@ -33,34 +33,36 @@ button{
 
 .flex-el{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
   }
   .inp{
-      width: 58%;
-      padding: 0 20px 0 20px    ;
+      width: 100%;
+      // padding: 0 20px 0 20px;
   }
   .flex-el2{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
     justify-content: space-between;
-    align-items: center;
     grid-column-start: 1;
     grid-column-end: 3;
   }
   
   .inp2{
-    width: 80%;
-    margin: 0 1em 0 1em;
+    width: 100%;
+    // padding: 0 20px 0 20px;
+    // margin: 0 1em 0 1em;
   }
     
   .left-el{
     flex-direction: row;
   }
   
+ 
+
   select{
     border-radius: 5px;
     word-wrap: normal;
@@ -133,12 +135,12 @@ button{
       font-size: 16px;
     }
     .passport{
-      width: 12.5em;
-      height: 12.5em;
+      width: 10em;
+      height: 10em;
     }
     .img{
-      height: 12.5em; 
-      width: 12.5em;
+      height: 10em; 
+      width: 10em;
     }
   }
   

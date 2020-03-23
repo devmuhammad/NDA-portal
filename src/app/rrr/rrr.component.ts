@@ -45,7 +45,7 @@ export class RrrComponent implements OnInit {
 
     this.api.purchase(this.load).subscribe(res => {
     console.log(this.load); 
-    alert('SUCCESSFULL') 
+    alert('SUCCESSFULL : Your rrr code is :' + arr) 
     this.purchaseData = { "name": "", "email": "", "confirmEmail": "", "number":"",}
     localStorage.setItem("rrr", JSON.stringify(this.load))
     window.location.href = "/signup"

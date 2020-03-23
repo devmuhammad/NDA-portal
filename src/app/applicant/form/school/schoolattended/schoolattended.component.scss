@@ -29,16 +29,26 @@
     width: 90%;
   }
 
-  .flex-el{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90%;
-  }
-  .inp2{
-    padding: 0px 10px 0 10px ;
+.flex-el{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+.inp{
+  width: 30em;
+}
+.inp2{
+  padding: 0px 10px 0 10px ;
+
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  
 }
 
 .flex-end{
@@ -46,13 +56,24 @@
   color: white;
 }
 
-button{
-  background: rgba(0, 0, 14, 0.76);
-  color: white;
-  // float: right;
+.button{
+  
+  width: 100%;
+  float: right;
   // margin-top: 1em;
   bottom: 0;
   position: absolute;
+  button{
+    background: rgba(0, 0, 14, 0.76);
+    color: white;
+    float: right;
+    margin-right: 16em;
+    margin-bottom: 2.3em;
+  }
+}
+
+.table{
+  background-color: #eeeeee;
 }
 
 .flex-el2{

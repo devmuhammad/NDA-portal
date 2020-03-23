@@ -47,6 +47,30 @@
       "password": "admin",
       "RRR": "789274553716666",
       "id": 6
+    },
+    {
+      "name": "mubeen",
+      "Email": "mubeen02@gmail.com",
+      "PhoneNumber": "08165931631",
+      "password": "mubeen",
+      "RRR": "73579890181944",
+      "id": 7
+    },
+    {
+      "name": "baboon",
+      "Email": "baboon@g.c",
+      "PhoneNumber": "09090909090",
+      "password": "baboon",
+      "RRR": "995631384142712",
+      "id": 8
+    },
+    {
+      "name": "master",
+      "Email": "master@g.com",
+      "PhoneNumber": "08165931631",
+      "password": "master",
+      "RRR": "619245690078344",
+      "id": 9
     }
   ],
   "payment": [
@@ -67,6 +91,30 @@
       "email": "muhammad.s@comsoftltd.com",
       "RRR": "789274553716666",
       "id": 3
+    },
+    {
+      "name": "mubeen",
+      "email": "mubeen02@gmail.com",
+      "RRR": "73579890181944",
+      "id": 4
+    },
+    {
+      "name": "monkey",
+      "email": "monkey@g.c",
+      "RRR": "331012352437018",
+      "id": 5
+    },
+    {
+      "name": "baboon",
+      "email": "baboon@g.c",
+      "RRR": "995631384142712",
+      "id": 6
+    },
+    {
+      "name": "master",
+      "email": "master@g.com",
+      "RRR": "619245690078344",
+      "id": 7
     }
   ],
   "applicantData": [
@@ -107,6 +155,25 @@
       "religion": "islam",
       "height": 1.78,
       "id": 2
+    },
+    {
+      "lastname": "Abdulhameed",
+      "firstname": "Mubeen",
+      "serviceno": "",
+      "email": "mohdmubeen137@gmail.com",
+      "presentAddy": "zone 6, Aso pure water",
+      "permanentAddy": "Dutse Alhaji, Abuja",
+      "number1": "08165931631",
+      "number2": "",
+      "POB": "Lagos",
+      "DOB": "1999-05-25T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Kogi",
+      "LGA": "Okene",
+      "city": "Agasa",
+      "religion": "islam",
+      "height": 1.7,
+      "id": 3
     }
   ],
   "guardianData": [
@@ -161,6 +228,32 @@
       "relationship2": "Sister",
       "address2": "Zone B, karimu west Ilorin",
       "id": 4
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@g.com",
+      "number1": "08036677652",
+      "relationship1": "Father",
+      "address1": "zone 6, Aso pure water",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 5
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@g.com",
+      "number1": "08036677652",
+      "relationship1": "Father",
+      "address1": "zone 6, Aso pure water",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 6
     }
   ],
   "choices": [
@@ -187,6 +280,14 @@
       "department": "Security and Intelligence Science",
       "course": "BSc. Security and Intelligence Science",
       "id": 8
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN AIRFORCE",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 9
     }
   ],
   "jambdetail": [
@@ -213,6 +314,18 @@
       "examno": "",
       "year": "2020",
       "id": 4
+    },
+    {
+      "regno": "",
+      "examno": "",
+      "year": "",
+      "id": 5
+    },
+    {
+      "regno": "47271732GF",
+      "examno": "",
+      "year": "2020",
+      "id": 6
     }
   ]
 }

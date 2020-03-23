@@ -44,12 +44,14 @@ body{
     // align-content: space-between;
     cursor: pointer;
     .login{
-        background-color: rgba(0,0,14,0.76);
+        background-color: white;
         margin: 10px;
+        height: 40px;
     }
-    .sign{
-        background-color: rgba(0,0,14,0.76);
-        margin: 10px;
+    img{
+        padding-left: 2em;
+        padding-right: 4px;
+        padding-top: 10px;
     }
     a:hover{
         color: red;
@@ -137,17 +139,17 @@ a:hover{
     background: linear-gradient(rgba(0,0,14,0.76), rgba(0,0,0,0.5)) , var(--image-url) center center;
     background-size: cover;
     color: white;
-    width: 70%;
-    height: 45em;
+    width: 100%;
+    height: 30em;
+    .sign{
+        background-color: white ;
+        width: 18em;
+        padding: 14px;
+        margin-top: 10px;
+    }
 }
 
-img{
-    width: 16em;
-    height: 14em;
-    padding-left: 2em;
-    padding-right: 4px;
-    padding-top: 10px;
-}
+
 
 .title{
     display: flex;
@@ -171,7 +173,7 @@ img{
     font-size: 40px; 
     width: 100%;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 10px;
     font-weight: bolder;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',;
 }
@@ -191,6 +193,7 @@ img{
     position: relative;
 }
 .announcement{
+    width: 35%;
     line-height: 200%;
     overflow: auto;
 }
@@ -263,9 +266,7 @@ button{
     }
 }
 @media (min-width:300px) {
-    .container{
-        width: 80%;
-    }
+
     .logup{
         font-size: 12px;
     }
@@ -355,8 +356,8 @@ button{
         height: 35em;
 }
     img{
-        width: 12em;
-        height: 10em;
+        width: 10em;
+        height: 8em;
     }
     .container{
         height: 35em;
@@ -388,12 +389,10 @@ button{
         height: 40em;
 }
     img{
-        width: 14em;
-        height: 12em;
+        width: 10em;
+        height: 8em;
     }
-    .container{
-        height: 40em;
-    }
+
     .step{
         font-size: 28px;
     }
@@ -416,12 +415,10 @@ button{
     height: 42em;
     }
     img{
-        width: 16em;
-        height: 14em;
+        width: 12em;
+        height: 10em;
     }
-    .container{
-        height: 45em;
-    }
+ 
     .step{
         font-size: 30px;
     }
@@ -431,7 +428,8 @@ button{
 
 
 .steps{
-    margin: 2em 10px 2em 10px;
+    margin: 10px;
+    font-size: 12px;
     display: flex;
     font-weight: bold ;
     flex-wrap: wrap;
@@ -442,23 +440,25 @@ button{
 
 .step{
     text-align: center; 
-    margin: 1em 2em 3em 2em; 
+    margin: 1em 2em 1em 2em; 
     font-family: verdana;
 
 }
 
 .step1{
     // display: inline-block;
-    margin: 2em 4em 2em 4em;
+    margin: 10px 2em 4em;
     width: 20em;
     justify-content: stretch;
-    // font-size: 16px;
+    line-height: 200%;
+        // font-size: 16px;
     text-align: left;
 }
 
 .step2{
     // display: inline-block;
-    margin: 2em 4em 2em 4em;
+    margin: 10px 4em 2em 4em;
+    line-height: 200%;
     text-align: left;
     width: 20em;
     // font-size: 16px;
@@ -467,7 +467,8 @@ button{
 
 .step3{
     // display: inline-block;
-    margin: 2em 4em 2em 4em;
+    margin: 10px 4em 2em 4em;
+    line-height: 200%;
     text-align: left;
     width: 20em;  
     // font-size: 16px;

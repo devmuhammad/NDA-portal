@@ -45,7 +45,7 @@
   </div>
   &nbsp;
   <div class="flex-el2">
-    <mat-table #table [dataSource]="dataSource">    
+    <mat-table class="table" #table [dataSource]="dataSource">    
       <ng-container matColumnDef="schoolname">
         <mat-header-cell *matHeaderCellDef> Name of Schools </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.schoolname}} </mat-cell>
@@ -93,25 +93,28 @@
 &nbsp;
 <div style="color:rgba(0, 0, 14, 0.76); font-weight:600">Enter the qualifications obtained <sup>*</sup>  </div><br>
 <div class="flex-el">
-  <!-- <p> JAMB REG NO. <sup>*</sup> </p> -->
-  <mat-form-field class="inp2" appearance="outline" floatLabel="never">
-    <mat-label> JAMB Reg No. </mat-label>
-    <input matInput [(ngModel)]="jamb.regno">
-  </mat-form-field>
+  <div class="flex">
+    <div style="font-weight: normal; padding-left: 10px;"> JAMB Reg no. <sup>*</sup> </div>
+    <mat-form-field class="inp" appearance="outline" floatLabel="never">
+      <input matInput [(ngModel)]="jamb.regno">
+    </mat-form-field>
+  </div>
 
-  <!-- <p> JAMB EXAM NO. </p> -->
-  <mat-form-field class="inp2" appearance="outline" floatLabel="never">
-    <mat-label> JAMB Exam No. </mat-label>
-    <input matInput [(ngModel)]="jamb.examno">
-  </mat-form-field>
+  <div class="flex">
+    <div style="font-weight: normal; padding-left: 10px;"> JAMB Exam no. </div>
+    <mat-form-field class="inp" appearance="outline" floatLabel="never">
+      <input matInput [(ngModel)]="jamb.examno">
+    </mat-form-field>
+  </div>
 
-  <!-- <p> Year </p> -->
-  <mat-form-field appearance="outline" class="inp2" style="width: 15em;"> 
-    <mat-label> Year: </mat-label>
-    <mat-select [(ngModel)]="jamb.year" >
-      <mat-option value="2020">2020</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div class="flex">
+    <div style="font-weight: normal; padding-left: 10px;"> Year <sup>*</sup> </div>
+    <mat-form-field appearance="outline" class="inp" style="width: 15em;"> 
+      <mat-select [(ngModel)]="jamb.year" >
+        <mat-option value="2020">2020</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </div>
 &nbsp;
 &nbsp;
@@ -250,7 +253,7 @@
     </div>
 
     <div>
-      <mat-table #table [dataSource]="resultGrade">
+      <mat-table class="table" #table [dataSource]="resultGrade">
         <!-- Symbol Column -->
         <ng-container matColumnDef="title">
           <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
@@ -400,7 +403,7 @@
     </div>
 
     <div> 
-      <mat-table #table [dataSource]="resultGrade2">
+      <mat-table class="table" #table [dataSource]="resultGrade2">
         <ng-container matColumnDef="title2">
           <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
           <mat-cell *matCellDef="let data"> {{data.title2}} </mat-cell>
@@ -424,6 +427,11 @@
     </div>
   </mat-card>
 </div>
-
+<mat-checkbox style="font-weight: normal;" [(ngModel)]="check">I hereby declare that the statements made in this application are true to the best of my knowledge and that
+  i am a citizen of the Federal Republic of Nigeria. (Candidates are warned that falsification of documents will attract automatic disqualification
+  and prosecution in a court of law).</mat-checkbox>
+&nbsp; 
 &nbsp;
-<button mat-button (click)="submit()">Save</button>&nbsp;
+<div class="button">
+  <button mat-raised-button [disabled]="check != true" (click)="submit()">Save</button>&nbsp;
+</div>

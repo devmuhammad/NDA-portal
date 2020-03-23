@@ -2,8 +2,8 @@
 
 <mat-card  class="card">
 <div class="main-container" >
-  <mat-tab-group  [selectedIndex]="selectedTab">
-    <mat-tab label="Instructions" >
+  <mat-tab-group  [selectedIndex]="selectedTab" >
+    <mat-tab label="Instructions" [disabled]="selectedTab != 0">
       <ng-template matTabContent >
         <div class="tab-container">
           <div class="general-title">Please read instructions below carefully </div>
@@ -36,7 +36,7 @@
       </ng-template>
     </mat-tab>
 
-    <mat-tab label="Your Information" [disabled] = "selectedTab !<= 1" >
+    <mat-tab label="Your Information" [disabled] = "selectedTab !< 1" >
       <mat-horizontal-stepper class="step-top" linear labelPosition="bottom" #hrstepper>
           <mat-step label="Personal Information" state="pInfo">  
             &nbsp;
@@ -80,30 +80,27 @@
             </div>
           </mat-step>
 
-          <mat-step label="Choice of Service" >
+          <mat-step label="Schools Attended" >
             &nbsp;
             &nbsp;
-            <app-choice></app-choice>
+            <app-school></app-school>
             <br>
             &nbsp;
-            <mat-checkbox [(ngModel)]="check">I hereby declare that the statements made in this application are true to the best of my knowledge and that
-              i am a citizen of the Federal Republic of Nigeria. (Candidates are warned that falsification of documents will attract automatic disqualification
-              and prosecution in a court of law).</mat-checkbox>
-            &nbsp; 
+         
             <br>
             &nbsp; 
             <div class="flex-end">
               <button mat-button matStepperPrevious >Back</button> &nbsp;
-              <button mat-raised-button [disabled]=" check != true" (click)="switchTab('info')"> Next </button>
+              <button mat-raised-button (click)="switchTab('info')"> Next </button>
             </div>
           </mat-step>
         </mat-horizontal-stepper>
     </mat-tab>
 
-    <mat-tab label="Qualifications" [disabled] = "selectedTab !<= 2">
+    <mat-tab label="Choice of Service" [disabled] = "selectedTab !< 2">
       <ng-template matTabContent>
-        <app-school></app-school>
         &nbsp;
+        <app-choice></app-choice>
         &nbsp;
         <div class="flex-end">
           <button mat-button (click)="switchTab('qualification')"> Next </button>
@@ -112,7 +109,7 @@
 
     </mat-tab>
 
-    <mat-tab  label="Upload Document(s)" [disabled] = "selectedTab !<= 3"> 
+    <mat-tab  label="Upload Document(s)" [disabled] = "selectedTab !< 3"> 
       <ng-template matTabContent >
         <app-upload></app-upload>
         &nbsp;<br>

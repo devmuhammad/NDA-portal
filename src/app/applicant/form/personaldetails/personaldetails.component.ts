@@ -58,8 +58,6 @@ export class PersonaldetailsComponent implements OnInit {
     reader.onload = (_event) => { 
       this.imgURL = reader.result; 
       const dataUrl = this.imgURL;
-      console.log(this.imgURL);
-      console.log(this.imagePath)
     localStorage.setItem("image", JSON.stringify(this.imgURL))
 
     }

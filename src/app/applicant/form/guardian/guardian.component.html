@@ -7,15 +7,15 @@
         <div class="left-el">  Parent / Guardian Name: <sup>*</sup> </div>
           <mat-form-field class="inp" appearance="outline" floatLabel="never">
             <mat-hint>Guardian's name and surname</mat-hint>
-            <input matInput placeholder="John Doe" required [(ngModel)] = "guardianData.parentName1">
+            <input matInput required [(ngModel)] = "guardianData.parentName1">
           </mat-form-field>
     </div>
 
     <div class="flex-el ">
-        <div class="left-el"> Email: <sup>*</sup></div>
+        <div class="left-el"> Email: </div>
           <mat-form-field class="inp" appearance="outline" floatLabel="never">
             <mat-hint>Guardian's email</mat-hint>
-            <input matInput="Email" required [(ngModel)] = "guardianData.email1">
+            <input matInput="Email" [(ngModel)] = "guardianData.email1">
           </mat-form-field>
     </div>
 
@@ -52,7 +52,7 @@
       <div class="left-el">  Parent / Guardian Name: </div>
         <mat-form-field class="inp" appearance="outline" floatLabel="never">
             <mat-hint>Guardian's name and surname</mat-hint>
-            <input matInput placeholder="John Doe" [(ngModel)] = "guardianData.parentName2">
+            <input matInput [(ngModel)] = "guardianData.parentName2">
         </mat-form-field>
     </div>
 

@@ -47,7 +47,7 @@ export class ChoiceComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+  } 
 
   selectedFaculty(faculty){
     this.dptclicked = true

@@ -1,21 +1,42 @@
 <title>{{title}}</title>
 <div class="header">
-        <div class="container" style="--image-url: url('/assets/images/ndabg3.png')">
-            <img src="\assets\images\download2.png">
-            <div class="title">
-                <p class="head">Nigerian Defence Academy</p>
-                <p class="topic">Application for 72nd Regular Course</p>
-                <p class="date" >5th December, 2019 - 20 March, 2020</p>
-            </div>
-        </div>
-    <div style="font-weight: bold;" class="right-tab" >
+    <div class="container" style="--image-url: url('/assets/images/ndabg3.png')">
         <div class="logup">
-            <button mat-raised-button class="login" style="cursor:pointer; color: white;" routerLink ="/login">Login</button>
-            <button mat-raised-button class="sign" style="cursor:pointer; color: white;" routerLink = "/rrr">Purchase Access Code</button>
+            <img src="\assets\images\download2.png">
+            <button mat-raised-button class="login" style="cursor:pointer;" routerLink ="/login">Login</button>
         </div>
-        <div class="announcement">
-        <h2 style="color: green; text-align: center; font-weight: 600;">ANNOUNCEMENT</h2>
-     
+        <div class="title">
+            <p class="head">Nigerian Defence Academy</p>
+            <p class="topic">Application for 72nd Regular Course</p>
+            <p class="date" >5th December 2019 - 20 March 2020</p>
+            <button mat-raised-button class="sign" style="cursor:pointer;" routerLink = "/rrr">Purchase Access Code</button>
+        </div>
+    </div>
+</div>
+<div style="display: flex; flex-direction: row;">
+    <div>
+        <h2 class="step">STEPS FOR THE 72nd REGULAR COURSE APPLICATION</h2>
+        <div class="steps">
+            <span class="step1">
+                <img src="/assets/images/step1.png" style="justify-self: center; width: 6vw; height: 6vw;">
+                <p>Step 1: Download the Advertisement, Programme List and Admissions Requirements</p>
+                <p><a href="\assets\Advertfor72RC.pdf ">Advertisement</a></p>
+                <p><a href="\assets\Requirements72RC.pdf">Requirements</a></p>
+            </span>
+            <span class="step2">
+                <img src="/assets/images/step2.png" style="width: 6vw; height: 6vw;">
+                <p>Step 2: Purchase Application Form</p>
+                <p>Click <a href="/pinPurchase">Purchase Access Code</a> and fill in your details to pay for your applicatiion via REMITA after first obtaining your 
+                ORDER ID and RRR Code in the sum of N3,500.00 only. Please note that only payments made against RRR Codes generated via this portal would be accepted.</p>
+            </span>
+            <span class="step3">
+                <img src="/assets/images/step3.png" style="width: 6vw; height: 6vw;">
+                <p><a href="/signup">Sign Up</a> to create an account. Fill in your applicatiion, submit online and print a copy...</p>
+            </span>     
+        </div>
+    </div>
+    <div class="announcement">
+        <h2 style="color: green; text-align: center; font-weight: 600;">ANNOUNCEMENT</h2>      
         <ul>
             <li>If you are experiencing difficulties with the application portal,
                 please contact the portal managers via email - info@ndaapplications.net</li>
@@ -27,30 +48,9 @@
             <li>The compedium of past question papers is only available at the NDA Registry, Afaka, Kaduna.
                 You CANNOT obtain a copy from this website!</li>    
         </ul>
-        </div>
     </div>
 </div>
-<div>
-    <h2 class="step">STEPS FOR THE 72nd REGULAR COURSE APPLICATION</h2>
-    <div class="steps">
-        <span class="step1">
-            <img src="/assets/images/step1.png" style="justify-self: center; width: 6vw; height: 6vw;">
-            <p>Step 1: Download the Advertisement, Programme List and Admissions Requirements</p>
-            <p><a href="\assets\Advertfor72RC.pdf ">Advertisement</a></p>
-            <p><a href="\assets\Requirements72RC.pdf">Requirements</a></p>
-        </span>
-        <span class="step2">
-            <img src="/assets/images/step2.png" style="width: 6vw; height: 6vw;">
-            <p>Step 2: Purchase Application Form</p>
-            <p>Click <a href="/pinPurchase">Purchase Access Code</a> and fill in your details to pay for your applicatiion via REMITA after first obtaining your 
-            ORDER ID and RRR Code in the sum of N3,500.00 only. Please note that only payments made against RRR Codes generated via this portal would be accepted.</p>
-        </span>
-        <span class="step3">
-            <img src="/assets/images/step3.png" style="width: 6vw; height: 6vw;">
-            <p><a href="/signup">Sign Up</a> to create an account. Fill in your applicatiion, submit online and print a copy...</p>
-        </span>
-    </div>
-</div>
+
 <div>
     <app-footer></app-footer>
 </div>

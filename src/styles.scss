@@ -2,6 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+// <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -29,7 +30,11 @@ $nda-project-theme: mat-light-theme($nda-project-primary, $nda-project-accent, $
 /* You can add global styles to this file, and also import other style files */
 
 // html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif;
+    background: #eeeeee;
+}
 
 a{
     color: black;
