@@ -60,5 +60,6 @@ NABTEB or NBAIS Certificates may lead to disqualification!</p>
 <mat-divider></mat-divider>
 </div>
 <div class="button">
-    <button mat-button (click)="submit()">Upload</button>&nbsp;
+    <button mat-button (click)="submit()" [(ngModel)]="isWait">Upload</button>&nbsp;
+    <mat-spinner mode="indeterminate" *ngIf="isWait" = true></mat-spinner>
 </div>
