@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { RrrComponent } from './rrr/rrr.component';
 import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
-import { PersonalDetailsComponent } from './applicant/personal-details/personal-details.component';
 import { FormComponent } from './applicant/form/form.component';
 import { WelcomeComponent } from './applicant/welcome/welcome.component';
 import { ApplicantComponent } from "./applicant/applicant.component";
@@ -25,7 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatFormFieldModule, MatInputModule, MatRippleModule, MatOptionModule, MatSelectModule, MatToolbarModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule, MatStepperModule, MatTabsModule, MatCheckboxModule, MatProgressSpinnerModule, MatListModule, MatTableModule, MatSnackBar, MatSnackBarModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatRippleModule, MatOptionModule, MatSelectModule, MatToolbarModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule, MatStepperModule, MatTabsModule, MatCheckboxModule, MatProgressSpinnerModule, MatListModule, MatTableModule, MatSnackBar, MatSnackBarModule, MatChipsModule } from '@angular/material';
 import { FooterComponent } from './footer/footer.component';
 
 import { NgxMatIntlTelInputModule  } from "ngx-mat-intl-tel-input";
@@ -51,7 +51,6 @@ import { SaveprintComponent } from './applicant/form/saveprint/saveprint.compone
     SignupComponent,
     RrrComponent,
     PasswordRecoveryComponent,
-    PersonalDetailsComponent,
     FormComponent,
     WelcomeComponent,
     ApplicantComponent,
@@ -75,6 +74,7 @@ import { SaveprintComponent } from './applicant/form/saveprint/saveprint.compone
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -101,6 +101,7 @@ import { SaveprintComponent } from './applicant/form/saveprint/saveprint.compone
     MatListModule,
     MatTableModule,
     MatSnackBarModule,
+    MatChipsModule,
     LayoutModule
   ],
   providers: [],

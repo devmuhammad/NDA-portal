@@ -4,7 +4,7 @@
   <div class="passport" (click)="passport.click()">
     <img [src]="imgURL"  class="img" *ngIf="imgURL" >
     <span style="color:red;" *ngIf="message">{{message}}</span>
-    <div style="color: green; text-align: center; margin-top: 4em; cursor: default;"> Click to Upload passport </div>
+    <div class="upload" id="click"> Click to Upload passport </div>
     <input #file type="file" accept='image/*' #passport hidden (change)="preview(file.files)"  required="true"/>
   </div>
 </div>

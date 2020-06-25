@@ -20,9 +20,18 @@ export class SignupComponent implements OnInit {
   errorRRR: string;
 
   rrrcode = {}
+
+  currentEvent: any = {id: null, name: '', description: '', date: new Date()};
+
   constructor(private api: ApiService) { }
 
-
+  ngOnInit() {
+    this.getRRR();
+    
+    this.rrrcode = JSON.parse(localStorage.getItem("rrr"))
+    console.log(this.rrrcode);
+    
+  }
 
   checkPasswordMatch() {
     if (this.signUpData.password !== this.signUpData.confirmPassword){
@@ -40,14 +49,6 @@ export class SignupComponent implements OnInit {
        this.paymentName = res
        console.log(this.paymentName)
     })
-  }
-
-  ngOnInit() {
-    this.getRRR();
-    
-    this.rrrcode = JSON.parse(localStorage.getItem("rrr"))
-    console.log(this.rrrcode);
-    
   }
 
   checkRRR(){
@@ -89,9 +90,4 @@ export class SignupComponent implements OnInit {
     window.location.href = "/app/form"
   })
   }
-
-
-
-
-  
 }

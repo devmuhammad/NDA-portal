@@ -29,10 +29,19 @@
     width: 90%;
   }
 
+.flex-el-table{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 .flex-el{
   display: flex;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
@@ -42,6 +51,7 @@
 }
 .inp2{
   padding: 0px 10px 0 10px ;
+  width: 15em;
 
 }
 .flex{
@@ -57,16 +67,14 @@
 }
 
 .button{
-  
+  margin-left: 0;
   width: 100%;
-  float: right;
   // margin-top: 1em;
   bottom: 0;
   position: absolute;
   button{
     background: rgba(0, 0, 14, 0.76);
     color: white;
-    float: right;
     margin-right: 16em;
     margin-bottom: 2.3em;
   }
@@ -74,25 +82,37 @@
 
 .table{
   background-color: #eeeeee;
+  font-size: 8px;
 }
+.table-card{
+  background-color: #eeeeee;
+  font-size: 8px;
+}
+
 
 .flex-el2{
   margin: 0 auto;
   width: 90%;
+  justify-content: space-evenly;
 }
 
 .flex-el3{
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   .inp3{
     padding: 0px 10px 0 10px ;
-    width: 70%;
+    width: 60%;
   }
   .inp4{
     padding: 0px 10px 0 10px ;
     width: 30%;
+  }
+  .inp5{
+    padding: 0px 10px 0 10px ;
+    width: 40%;
   }
 }
 
@@ -103,17 +123,117 @@ sup{
 
 .container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
   
 }
 .card1 {
   text-align: left;
-  width: 40%;
+  width: 30em;
   padding: 10px 20px 10px 20px;
 }
 .card2 {
   text-align: left;
-  width: 40%;
+  width: 30em;
   padding: 10px 20px 10px 20px;
 }
+
+.inp-card {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 200px){
+  .inp{
+    width: 16em;
+  }
+  button{
+    font-size: 9px;
+    line-height: 20px;
+    width: 1em;
+  }
+  .table{
+    width: 70em;
+    overflow: auto;
+  }
+  .card1 {
+    width: 25em;
+  }
+  .card2{
+    width: 25em;
+  }
+
+}
+
+@media (min-width: 400px){
+  .inp{
+    width: 20em;
+  }
+  button{
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .table{
+    width: 50em;
+    overflow: auto;
+  }
+}
+
+@media (min-width: 600px){
+  .inp{
+    width: 26em;
+  }
+  button{
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .table{
+    width: 50em;
+    overflow: scroll;
+  }
+}
+
+@media (min-width: 800px){
+  .inp{
+    width: 28em;
+  }
+  button{
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .table{
+    width: 50em;
+    overflow: scroll;
+  }
+}
+
+@media (min-width: 1000px){
+  .inp{
+    width: 30em;
+  }
+  button{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  .table{
+    width: 90%;
+    overflow: hidden;
+  }
+}
+
+
+@-webkit-keyframes autofill {
+to {
+color: #666;
+background: transparent; } }
+
+@keyframes autofill {
+to {
+color: #666;
+background: transparent; } }
+
+input:-webkit-autofill {
+-webkit-animation-name: autofill;
+animation-name: autofill;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both; }

@@ -4,12 +4,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+    height: 7em;
     top: 0;
-    padding: 0;
     margin: 0;
-
+    padding: 0;
     a{
         color: white;
         text-decoration: none;
@@ -18,20 +17,31 @@
     img{
         width: 4em;
         height: 4em;
-        padding-left: 2em;
-        padding-right: 4px;
-        padding-top: 10px;
+        padding: 5px 4px 0 2em;
     }
 }
 
 .head{
-    margin: 2em 0 20px 0px;
     color: white;
     font-weight: bolder;
-    font-size: 20px;
+}
+
+.top{
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 .nav{
+    display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
     // align-content: center;
@@ -54,7 +64,9 @@
 }
 .logup{
    display: flex;
-   justify-content: space-evenly;
+   justify-content: right;
+   justify-items: right;
+   justify-self: right;
    color: white; 
    padding-right: 20px;    
 
@@ -72,11 +84,23 @@
     .logo{
         font-size: 8px;
     }
+    .head{
+        font-size: 9px;
+    }
+    .logout{
+        font-size: 9px;
+    }
 }
 
 @media (min-width:300px){
    
     .logo{
+        font-size: 12px;
+    }
+    .head{
+        font-size: 12px;
+    }
+    .logout{
         font-size: 12px;
     }
 }
@@ -85,10 +109,23 @@
     .logo{
         font-size: 18px;
     }
+    .head{
+        font-size: 16px;
+    }
+    .logout{
+        font-size: 16px;
+    }
 }
 
 @media (min-width:1000px){
     .logo{
         font-size: 1em;
+    }
+    .head{
+        font-size: 26px;
+        padding-left: 20px;
+    }
+    .logout{
+        font-size: 26px;
     }
 }

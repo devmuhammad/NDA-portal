@@ -13,17 +13,27 @@ export class LoginComponent implements OnInit {
   login:any= []
   loginData = {"Email" : "", "password": ""}
   errorpassword: string;
+  isAuthenticated: boolean;
+  loginRedirect: any;
 
   constructor(private api:ApiService) { }
 
   ngOnInit() {
-      this.api.getUsers().subscribe(res =>{
-        this.login = res
-        console.log(res);
-        
-      })
+    this.api.getUsers().subscribe(res =>{
+      this.login = res
+      console.log(res);
+      
+    })
+
   }
 
+  
+  logn() {
+    this.loginRedirect();
+  }
+  logout() {
+    this.logout();
+  }
   hide = true;
 
 

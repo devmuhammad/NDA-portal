@@ -71,6 +71,22 @@
       "password": "master",
       "RRR": "619245690078344",
       "id": 9
+    },
+    {
+      "name": "Haruna Precious Eshiozokhe",
+      "Email": "RUBBISH",
+      "PhoneNumber": "07082063132",
+      "password": "123456",
+      "RRR": "61785458891887",
+      "id": 10
+    },
+    {
+      "name": "testing two",
+      "Email": "test@g.com",
+      "PhoneNumber": "09029903909",
+      "password": "king",
+      "RRR": "21805473372451",
+      "id": 11
     }
   ],
   "payment": [
@@ -115,6 +131,30 @@
       "email": "master@g.com",
       "RRR": "619245690078344",
       "id": 7
+    },
+    {
+      "name": "Haruna Precious Eshiozokhe",
+      "email": "RUBBISH",
+      "RRR": "61785458891887",
+      "id": 8
+    },
+    {
+      "payerName": "new account",
+      "payerEmail": "acct@yahoo.com",
+      "rrr": "105693054343160",
+      "id": 9
+    },
+    {
+      "payerName": "testing",
+      "payerEmail": "test@g.com",
+      "RRR": "336404375484080",
+      "id": 10
+    },
+    {
+      "name": "testing two",
+      "email": "test@g.com",
+      "RRR": "21805473372451",
+      "id": 11
     }
   ],
   "applicantData": [
@@ -174,6 +214,44 @@
       "religion": "islam",
       "height": 1.7,
       "id": 3
+    },
+    {
+      "lastname": "ESHIOZOKHE",
+      "firstname": "HARUNA PRECIOUS",
+      "serviceno": "",
+      "email": "RUBBISH",
+      "presentAddy": "ABUJA",
+      "permanentAddy": "ABUJA",
+      "number1": "07082063132",
+      "number2": "08101214895",
+      "POB": "KANO",
+      "DOB": "2020-03-26T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Edo",
+      "LGA": "Etsako East",
+      "city": "Abuja",
+      "religion": "islam",
+      "height": -5,
+      "id": 4
+    },
+    {
+      "lastname": "human",
+      "firstname": "people",
+      "serviceno": "",
+      "email": "mubeen@something.yeah",
+      "presentAddy": "a place",
+      "permanentAddy": "where we stay",
+      "number1": "08036520667",
+      "number2": "",
+      "POB": "a hospital",
+      "DOB": "1993-07-12T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Adamawa",
+      "LGA": "Gayuk",
+      "city": "gayuk",
+      "religion": "islam",
+      "height": 1.4,
+      "id": 5
     }
   ],
   "guardianData": [
@@ -254,6 +332,19 @@
       "relationship2": "",
       "address2": "",
       "id": 6
+    },
+    {
+      "parentName1": "HARUNA ICHIOJI",
+      "email1": "RUBBISHAS",
+      "number1": "08054055277",
+      "relationship1": "SON",
+      "address1": "EDO",
+      "parentName2": "VICTORIA HARUNA",
+      "email2": "HONTION",
+      "number2": "08036079122",
+      "relationship2": "",
+      "address2": "",
+      "id": 7
     }
   ],
   "choices": [
@@ -288,6 +379,22 @@
       "department": "Computer Science",
       "course": "BSc. Computer Science",
       "id": 9
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN AIRFORCE",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 10
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN NAVY",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 11
     }
   ],
   "jambdetail": [
@@ -326,6 +433,12 @@
       "examno": "",
       "year": "2020",
       "id": 6
+    },
+    {
+      "regno": "12345678888GFGHHH",
+      "examno": "7667YYTY7YYTY",
+      "year": "2020",
+      "id": 7
     }
   ]
 }

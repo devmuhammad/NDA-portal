@@ -3,7 +3,7 @@
 <mat-card  class="card">
 <div class="main-container" >
   <mat-tab-group  [selectedIndex]="selectedTab" >
-    <mat-tab label="Instructions" [disabled]="selectedTab != 0">
+    <mat-tab label="Instructions" class="tab-font" [disabled]="selectedTab != 0">
       <ng-template matTabContent >
         <div class="tab-container">
           <div class="general-title">Please read instructions below carefully </div>
@@ -22,7 +22,7 @@
           <li> The passport size must be less than or equal to 160kb </li>
           &nbsp;
           <div class="mt-5">
-            <mat-checkbox [(ngModel)]="instruct">
+            <mat-checkbox style="height: 10px; width: 10px;" [(ngModel)]="instruct">
               I understand the requirements stated above
             </mat-checkbox>
           </div>
@@ -85,13 +85,14 @@
             &nbsp;
             <app-school></app-school>
             <br>
-            &nbsp;
-         
+            <mat-checkbox style="font-weight: normal;" [(ngModel)]="check">I hereby declare that the statements made in this application are true to the best of my knowledge and that
+              i am a citizen of the Federal Republic of Nigeria. (Candidates are warned that falsification of documents will attract automatic disqualification
+              and prosecution in a court of law).</mat-checkbox>
             <br>
             &nbsp; 
             <div class="flex-end">
               <button mat-button matStepperPrevious >Back</button> &nbsp;
-              <button mat-raised-button (click)="switchTab('info')"> Next </button>
+              <button mat-raised-button [disabled]="check != true" (click)="switchTab('info')"> Next </button>
             </div>
           </mat-step>
         </mat-horizontal-stepper>
@@ -114,7 +115,7 @@
         <app-upload></app-upload>
         &nbsp;<br>
         <mat-checkbox style="width: 80%;" [(ngModel)]="checkup"> I hereby declare that the uploaded credential(s)/document(s) made in this application are true to the best of my knowledge and that <br>I am a citizen of the Federal Republic of Nigeria. 
-          (Canditates are warned that falsification of documents will attract automatic disqualification and prosecution in a court of law)</mat-checkbox>
+          (Canditates are warned that falsification of documents will attract automatic disqualification and <br> prosecution in a court of law)</mat-checkbox>
         &nbsp;<br>
         <div class="flex-end">
           <button mat-raised-button [disabled]="checkup != true" (click)="switchTab('upload')"> Next </button>

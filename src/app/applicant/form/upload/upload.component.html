@@ -3,63 +3,66 @@
 Birth Certificate/Declaration of Age and copy(ies) of your SSCE, NECO, 
 NABTEB or NBAIS Certificates may lead to disqualification!</p>
 <div>
-<div class="grid">
-    <p>Birth Certificate <sup style="color: red;">*</sup></p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>Birth Certificate <sup style="color: red;">*</sup></p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>NABTEB</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>NABTEB</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>NBAIS</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>NBAIS</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>NECO</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>NECO</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>SSCE (School Cert.)</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>SSCE (School Cert.)</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>SSCE (Private)</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>SSCE (Private)</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
-</div>
-<mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-<div class="grid">
-    <p>Other Credentials</p>
-    <div style="display: flex; align-items: center;">
-        <input type="file"><br>
+    <div class="grid">
+        <p>Other Credentials</p>
+        <div style="display: flex; align-items: center;">
+            <input type="file"><br>
+        </div>
     </div>
+
+    <mat-divider></mat-divider>
+
 </div>
-<mat-divider></mat-divider>
-</div>
+
 <div class="button">
-    <button mat-button (click)="submit()" [(ngModel)]="isWait">Upload</button>&nbsp;
+    <button mat-button (click)="submit()">Upload</button>&nbsp;
     <mat-spinner mode="indeterminate" *ngIf="isWait" = true></mat-spinner>
 </div>

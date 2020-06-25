@@ -4,7 +4,7 @@
 &nbsp;
 &nbsp;
 <mat-card>
-  <div  class="flex-el">
+  <div  class="flex-el-table">
     <mat-form-field appearance="outline" class="inp2">
         <mat-label>Name of School</mat-label>        
         <input matInput [(ngModel)]="name">&nbsp;
@@ -46,35 +46,32 @@
   &nbsp;
   <div class="flex-el2">
     <mat-table class="table" #table [dataSource]="dataSource">    
-      <ng-container matColumnDef="schoolname">
+      <ng-container matColumnDef="schoolname" class="inp-table">
         <mat-header-cell *matHeaderCellDef> Name of Schools </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.schoolname}} </mat-cell>
       </ng-container>
   
-      <!-- Name Column -->
-      <ng-container matColumnDef="schooltype">
+      <ng-container matColumnDef="schooltype" class="inp-table">
         <mat-header-cell *matHeaderCellDef> School type </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.schooltype}} </mat-cell>
       </ng-container>
   
-      <!-- Weight Column -->
-      <ng-container matColumnDef="schoolstate">
+      <ng-container matColumnDef="schoolstate" class="inp-table">
         <mat-header-cell *matHeaderCellDef> State/Town </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.schoolstate}} </mat-cell>
       </ng-container>
   
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="datefrom">
+      <ng-container matColumnDef="datefrom" class="inp-table">
         <mat-header-cell *matHeaderCellDef> From </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.datefrom | date}} </mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="dateto">
+      <ng-container matColumnDef="dateto" class="inp-table">
         <mat-header-cell *matHeaderCellDef> To </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.dateto | date}} </mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="del">
+      <ng-container matColumnDef="del" class="inp-table">
           <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
           <mat-cell (click)="deleteItem(element)" *matCellDef="let element"> 
               <mat-icon  style="color: red; cursor: pointer;" >delete_sweep</mat-icon>
@@ -132,7 +129,7 @@
 <div class="container">
   <mat-card class="card1">  
     <div style="color: rgba(0, 0, 14, 0.76);">1st Sitting: <sup>*</sup> </div><br>
-    <mat-form-field appearance="outline"  class="inp2">
+    <mat-form-field appearance="outline"  class="inp-card">
       <mat-label>Exam Type</mat-label>
       <mat-select [(ngModel)]="Exam">
         <mat-option value="">-Select Exam Type-</mat-option>
@@ -144,7 +141,7 @@
       </mat-select>&nbsp;
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="inp2">
+    <mat-form-field appearance="outline" class="inp-card">
       <mat-label>Exam Center</mat-label>
       <input matInput [(ngModel)]="center">&nbsp;
     </mat-form-field>
@@ -161,13 +158,10 @@
           <mat-option *ngFor="let year of years" [value]="year"> {{year}}</mat-option>
         </mat-select>
       </mat-form-field>
-    </div><br>
-
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <div class="flex-el">
-      <mat-form-field appearance="outline" class="inp2">
+    </div>
+    
+    <div class="flex-el3">
+      <mat-form-field appearance="outline" class="inp5">
         <mat-label>Subject</mat-label>
         <mat-select [(ngModel)]= "subject">
           <mat-option value="">-Select Subject-</mat-option>
@@ -225,7 +219,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field appearance="outline" class="inp2">
+      <mat-form-field appearance="outline" class="inp5">
         <mat-label>Grade</mat-label>
         <mat-select [(ngModel)]= "grade">
           <mat-option value="">-Select Grade-</mat-option>
@@ -253,7 +247,7 @@
     </div>
 
     <div>
-      <mat-table class="table" #table [dataSource]="resultGrade">
+      <mat-table class="table-card" #table [dataSource]="resultGrade">
         <!-- Symbol Column -->
         <ng-container matColumnDef="title">
           <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
@@ -283,7 +277,7 @@
     &nbsp;
   <mat-card  class="card2">
     <div style="color: rgba(0, 0, 14, 0.76);">2nd Sitting: </div><br>
-    <mat-form-field appearance="outline" class="inp2">
+    <mat-form-field appearance="outline" class="inp-card">
       <mat-label>Exam Type</mat-label>
       <mat-select [(ngModel)]="Exam2" [disabled]="two == 'onesitting'" >
         <mat-option value="">-Select Exam Type-</mat-option>
@@ -295,7 +289,7 @@
       </mat-select>&nbsp;
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="inp2">
+    <mat-form-field appearance="outline" class="inp-card">
       <mat-label>Exam Center</mat-label>
       <input matInput [(ngModel)]="center2" [disabled]="two == 'onesitting'">&nbsp;
     </mat-form-field>
@@ -312,12 +306,10 @@
           <mat-option *ngFor="let year of years" [value]="year"> {{year}}</mat-option>
         </mat-select>
       </mat-form-field>
-    </div><br>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <div class="flex-el">
-      <mat-form-field appearance="outline"  class="inp2">
+    </div>
+
+    <div class="flex-el3">
+      <mat-form-field appearance="outline"  class="inp5">
         <mat-label>Subject</mat-label>
         <mat-select [disabled]="two == 'onesitting'" [(ngModel)] = "subject2">
       <mat-option value="">-Select Subject-</mat-option>
@@ -375,7 +367,7 @@
         </mat-select>
       </mat-form-field>
       
-      <mat-form-field appearance="outline"  class="inp2">
+      <mat-form-field appearance="outline"  class="inp5">
         <mat-label>Grade</mat-label>
         <mat-select [disabled]="two == 'onesitting' " [(ngModel)] = "grade2">
       <mat-option value="">-Select Grade-</mat-option>
@@ -403,7 +395,7 @@
     </div>
 
     <div> 
-      <mat-table class="table" #table [dataSource]="resultGrade2">
+      <mat-table class="table-card" #table [dataSource]="resultGrade2">
         <ng-container matColumnDef="title2">
           <mat-header-cell *matHeaderCellDef> Subject </mat-header-cell>
           <mat-cell *matCellDef="let data"> {{data.title2}} </mat-cell>
@@ -427,11 +419,9 @@
     </div>
   </mat-card>
 </div>
-<mat-checkbox style="font-weight: normal;" [(ngModel)]="check">I hereby declare that the statements made in this application are true to the best of my knowledge and that
-  i am a citizen of the Federal Republic of Nigeria. (Candidates are warned that falsification of documents will attract automatic disqualification
-  and prosecution in a court of law).</mat-checkbox>
+
 &nbsp; 
 &nbsp;
 <div class="button">
-  <button mat-raised-button [disabled]="check != true" (click)="submit()">Save</button>&nbsp;
+  <button mat-raised-button (click)="submit()">Save</button>&nbsp;
 </div>
