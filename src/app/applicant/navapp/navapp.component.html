@@ -1,7 +1,13 @@
 <div class="logo">
-    <div class="top">
-        <img src="\assets\images\download2.png" routerLink="/">
-        <span class="head">Nigerian Defence Academy</span>
+    <div class="nav2">
+        <div class="top">
+            <img src="\assets\images\download2.png" routerLink="/">
+            <span class="head">Nigerian Defence Academy</span>
+        </div>
+        <div class="logup">
+            <div>Welcome <b style="color: white;">{{loggedInUser.name | titlecase}}</b></div>&nbsp;&nbsp;
+            <mat-icon class="logout" routerLink = "/login">power_settings_new</mat-icon>
+        </div>
     </div>
     <div class="title">
         <div class="nav">
@@ -13,10 +19,6 @@
                 </mat-menu>
             </div> 
             <span style="cursor: pointer;"> <a href="mail:info@ndaapplications.net"> Contact</a></span>
-        </div>
-        <div class="logup">
-        <p>Welcome <b style="color: white;">{{loggedInUser.name | titlecase}}</b></p>&nbsp;&nbsp;
-            <mat-icon class="logout" routerLink = "/login">power_settings_new</mat-icon>
         </div>
     </div>
 </div>

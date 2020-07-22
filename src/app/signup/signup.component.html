@@ -8,39 +8,46 @@
                 <h3 style="color: red; font-family: sans-serif; padding-left: 10px;">NDA Regular Course Application</h3>
             </span>
         </div>
+
         <h3>Sign Up</h3>
-        <mat-form-field appearance="outline" >
-            <mat-label>Name: </mat-label>
-            <input matInput type="text" ngDefaultControl [(ngModel)]="signUpData.name">
-        </mat-form-field>
 
-    <div class="bossinp">
-        <mat-form-field appearance="outline" class="inp">
-            <mat-label>Email: </mat-label>
-            <input matInput type="email"  [(ngModel)] ="signUpData.Email">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="inp">
-            <mat-label>Phone Number: </mat-label>
-            <input matInput type="tel" ngDefaultControl [(ngModel)]="signUpData.PhoneNumber" minlength="11" maxlength="11">
-        </mat-form-field>
-    </div>
+        <form [formGroup]="signUpDetail" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline" class="inp2">
+                <mat-label>Name: </mat-label>
+                <input matInput type="text" ngDefaultControl formControlName="name">
+            </mat-form-field>
 
-    <div class="bossinp"> 
-        <mat-form-field appearance="outline" class="inp" >
-            <mat-label>Password: </mat-label>
-            <input matInput type="password" [(ngModel)]="signUpData.password">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="inp" >
-            <mat-label>Confirm Password: </mat-label>
-            <input matInput type="password" (change)="checkPasswordMatch()" [(ngModel)]="signUpData.confirmPassword">
-        </mat-form-field>
-    </div>
-    <div style="color: red; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
-    <div> Your rrr code is {{rrrcode.RRR}} </div>
-        <mat-form-field appearance="outline" >
-            <mat-label>Remita Retrieval Reference (RRR): </mat-label>
-            <input matInput type="text" [(ngModel)]="signUpData.RRR" (change)="checkRRR()" >
-        </mat-form-field>
+            <div class="bossinp">
+                <mat-form-field appearance="outline" class="inp">
+                    <mat-label>Email: </mat-label>
+                    <input matInput type="email"  formControlName ="Email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inp">
+                    <mat-label>Phone Number: </mat-label>
+                    <input matInput type="tel" ngDefaultControl formControlName="PhoneNumber" minlength="11" maxlength="11">
+                </mat-form-field>
+            </div>
+        
+            <div class="bossinp"> 
+                <mat-form-field appearance="outline" class="inp" >
+                    <mat-label>Password: </mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inp" >
+                    <mat-label>Confirm Password: </mat-label>
+                    <input matInput type="password" (change)="checkPasswordMatch()" formControlName="confirmPassword">
+                </mat-form-field>
+            </div>
+
+            <div style="color: red; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
+
+            <!-- <div> Your rrr code is {{rrrcode.RRR}} </div> -->
+            <mat-form-field appearance="outline" class="inp2" floatLabel = "never">
+                <mat-label>Remita Retrieval Reference (RRR): </mat-label>
+                <input matInput type="text" formControlName="RRR" (change)="checkRRR()" value="{{rrrcode.RRR}}" >
+            </mat-form-field>
+        </form>
+   
         <div style="color: red; font-size: 15px; font-style: italic;">{{errorRRR}}</div>
         <button mat-button class="but" (click)="signUp()"  type="submit">Sign Up</button>
         <p class="login" style="margin-top: 5px; margin-bottom: 5px;">Already have an account? <a routerLink="/login"><i>Login here</i></a></p>

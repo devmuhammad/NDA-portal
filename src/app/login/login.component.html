@@ -1,33 +1,38 @@
 
 <div class="Login">
-<mat-card class="formfield">  
-    <div class="title">
-        <img routerLink="/" alt="home" src="\assets\images\download2.png">
-        <span>
-            <h2 style="font-family: sans-serif;">Nigerian Defence Academy</h2>
-            <h3 style="color: red; font-family: sans-serif; padding-left: 10px;">NDA Regular Course Application</h3>
-        </span>
+    <mat-card class="formfield">  
+        <div class="title">
+            <img routerLink="/" alt="home" src="\assets\images\download2.png">
+            <span>
+                <h2 style="font-family: sans-serif;">Nigerian Defence Academy</h2>
+                <h3 style="color: red; font-family: sans-serif; padding-left: 10px;">NDA Regular Course Application</h3>
+            </span>
+        </div>
+        <h1>Login</h1>
+        <form [formGroup] ="loginDetail" (ngSubmit)="onSubmit()" class="flex-vert">
+    
+            <mat-form-field >
+                <mat-label>Email: </mat-label>
+                <input matInput type="email" formControlName ="Email" >
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text' " formControlName="password" >
+                <button mat-icon-button matSuffix (click)="hide = !hide" >
+                    <mat-icon class="micon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+    
+            <div style="color: blue; font-size: 15px; font-style: italic;">{{errorpassword}}</div>
+    
+            <button class="but" mat-button (click)="loginVal()" type="submit">Login</button>
+        </form>
+        <p class="sign">Don't have an account? <a routerLink='/signup'><i>Sign up here</i></a> </p>
+        <p class="login">Can't remember Password? <a routerLink='/passRecovery'><i>Recover password</i></a> </p>
+    </mat-card>
     </div>
-    <h1>Login</h1>
-    <mat-form-field >
-        <mat-label>Email: </mat-label>
-        <input matInput type="email" [(ngModel)] ="loginData.Email" >
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-        <mat-label>Password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text' " [(ngModel)]="loginData.password" >
-        <button mat-icon-button matSuffix (click)="hide = !hide" >
-            <mat-icon class="micon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    <div style="color: blue; font-size: 15px; font-style: italic;">{{errorpassword}}</div>
-    <button class="but" mat-button (click)="loginVal()" type="submit">Login</button>
-    <p class="sign">Don't have an account? <a routerLink='/signup'><i>Sign up here</i></a> </p>
-    <p class="login">Can't remember Password? <a routerLink='/passRecovery'><i>Recover password</i></a> </p>
-</mat-card>
-</div>
-
-<div class="foot">
-    <app-footerapp></app-footerapp>
-</div>
+    
+    <div class="foot">
+        <app-footerapp></app-footerapp>
+    </div>

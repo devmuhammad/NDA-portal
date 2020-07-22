@@ -9,29 +9,38 @@
             </span>
         </div>
         <h3 style="margin-top: 5px; margin-bottom: 5px;">Purchase Access Code</h3>
-        <mat-form-field appearance="outline">
-            <mat-label> Payer Name: </mat-label>
-            <input matInput type="text" [(ngModel)] ="purchaseData.name" >
-        </mat-form-field>
-      <div class="bossinp">
-        <mat-form-field appearance="outline" class="inp">
-            <mat-label> Payer Email: </mat-label>
-            <input matInput type="email" [(ngModel)] ="purchaseData.email">
-        </mat-form-field>
-        <mat-form-field appearance="outline" class="inp">
-            <mat-label> Confirm Email: </mat-label>
-            <input matInput type="email" [(ngModel)] ="purchaseData.confirmEmail" (change)='checkEmailMatch()'>
-        </mat-form-field>
-      </div>
-        <div style="color: red; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
-        <mat-form-field appearance="outline">
-            <mat-label> Payer Phone: </mat-label>
-            <input matInput type="tel" [(ngModel)] ="purchaseData.number" minlength="11" maxlength="11">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label> Amount: </mat-label>
-            <input matInput type="number" value ="3500" id="amount" (change)='generaterrr()' disabled >
-        </mat-form-field>
+
+        <form [formGroup]="rrrdata" (ngSubmit)="submit()">
+
+            <mat-form-field appearance="outline" class="inp2">
+                <mat-label> Payer Name: </mat-label>
+                <input matInput type="text" formControlName ="name" >
+            </mat-form-field>
+            
+            <div class="bossinp">
+                <mat-form-field appearance="outline" class="inp">
+                    <mat-label> Payer Email: </mat-label>
+                    <input matInput type="email" formControlName ="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="inp">
+                    <mat-label> Confirm Email: </mat-label>
+                    <input matInput type="email" formControlName ="confirmEmail" (change)='checkEmailMatch()'>
+                </mat-form-field>
+            </div>
+
+            <div style="color: red; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
+
+            <mat-form-field appearance="outline" class="inp2">
+                <mat-label> Payer Phone: </mat-label>
+                <input matInput type="tel" formControlName ="number" minlength="11" maxlength="11">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="inp2">
+                <mat-label> Amount: </mat-label>
+                <input matInput type="number" value ="3500" id="amount" (change)='generaterrr()' disabled >
+            </mat-form-field>
+        </form>
+        
         <button mat-button (click)="pinPurchase()" class="but" type="submit" value="submit" >Next</button>
         <p class="sign" style="margin: 10px;">Click <a routerLink='/signup'><i style="color: red;">here</i></a> to Sign-up after Purchase</p>
         <p class="login" style="margin: 10px;">Already have an account?<a routerLink='/login'><i>Login</i></a> </p>

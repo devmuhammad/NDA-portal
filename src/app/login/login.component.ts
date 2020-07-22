@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../api.service";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, FormBuilder, FormGroup } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 
@@ -11,14 +11,21 @@ import { HttpClientModule } from "@angular/common/http";
 })
 export class LoginComponent implements OnInit {
   login:any= []
-  loginData = {"Email" : "", "password": ""}
   errorpassword: string;
   isAuthenticated: boolean;
   loginRedirect: any;
 
-  constructor(private api:ApiService) { }
+  loginDetail: FormGroup;
+
+  constructor(private api:ApiService, private fb: FormBuilder) { }
 
   ngOnInit() {
+
+    this.loginDetail = this.fb.group({
+      'Email': [''],
+      'password': [''],
+    })
+
     this.api.getUsers().subscribe(res =>{
       this.login = res
       console.log(res);
@@ -39,16 +46,18 @@ export class LoginComponent implements OnInit {
 
 
   loginVal(){
-    console.log(this.loginData);
+    console.log(this.loginDetail);
     console.log();
+
+    let data = this.loginDetail
     
 
-    if (this.loginData.Email == "" || this.loginData.password == " "){
+    if (data.get('Email').value == "" || data.get('password').value == " "){
       alert('Please, input your login details!')
     }
 
     for (let i = 0; i < this.login.length; i++) {
-      if(this.loginData.Email == this.login[i].Email && this.loginData.password == this.login[i].password){
+      if(data.get('Email').value == this.login[i].Email && data.get('password').value == this.login[i].password){
         console.log(this.login[i], "true");
         let loginDet = this.login[i]
         localStorage.setItem("userData", JSON.stringify(loginDet))
@@ -56,10 +65,11 @@ export class LoginComponent implements OnInit {
         return
       }
       else {
-      }
     
+      }
+      this.errorpassword = 'The password is invalid!'
+      data.get('password').value == ''
     }
-  this.errorpassword = 'The password is invalid!'
   
   }
 

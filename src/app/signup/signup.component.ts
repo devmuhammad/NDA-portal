@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-
 import { ApiService } from "../api.service";
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   emailError = ''
   paymentName:any = []
 
-  signUpData = { "name": "", "Email": "", "PhoneNumber":"", "password": "", "confirmPassword": "", "RRR": ""}
+  // signUpData = { "name": "", "Email": "", "PhoneNumber":"", "password": "", "confirmPassword": "", "RRR": ""}
   payload = { "name": "", "Email" : "", "PhoneNumber": "", "password": "", "RRR": ""}
   errorMsg: string;
   errorRRR: string;
@@ -22,8 +22,9 @@ export class SignupComponent implements OnInit {
   rrrcode = {}
 
   currentEvent: any = {id: null, name: '', description: '', date: new Date()};
+  signUpDetail: FormGroup;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private fb: FormBuilder) { }
 
   ngOnInit() {
     this.getRRR();
@@ -31,12 +32,24 @@ export class SignupComponent implements OnInit {
     this.rrrcode = JSON.parse(localStorage.getItem("rrr"))
     console.log(this.rrrcode);
     
+    this.signUpDetail = this.fb.group({
+      'name': [''],
+      'Email': [''],
+      'PhoneNumber': [''],
+      'password': [''],
+      'confirmPassword': [''],
+      'RRR': ['']      
+    })
   }
 
+
   checkPasswordMatch() {
-    if (this.signUpData.password !== this.signUpData.confirmPassword){
+  let detail = this.signUpDetail
+
+
+    if (detail.get('password').value !== detail.get('confirmPassword').value){
       this.errorMsg = "Password does not match"
-      this.signUpData.confirmPassword = ""
+      detail.get('confirmPassword').value == ""
     }
     else {
       this.errorMsg = ""
@@ -52,39 +65,44 @@ export class SignupComponent implements OnInit {
   }
 
   checkRRR(){
+    let detail = this.signUpDetail
+
     for( var i = 0; i < this.paymentName.length; i++ ){
-      if(this.signUpData.Email == this.paymentName[i].email  && this.signUpData.RRR == this.paymentName[i].RRR){
+      if(detail.get('Email').value == this.paymentName[i].email  && detail.get('RRR').value == this.paymentName[i].RRR){
         console.log(this.paymentName[i], "fyu");   
         this.errorRRR=""
         return        
       }
       else {
         console.log("Not found");
-        console.log(this.signUpData);
+        console.log(this.signUpDetail);
+        this.errorRRR = "The RRR does not match this User!"
+        detail.get('RRR').value == ''
       }
     }
-    this.errorRRR = "The RRR does not match this User!"
-    this.signUpData.RRR = ''
+
   }
 
   signUp(){
    
-    if(this.signUpData.name == "" || this.signUpData.Email == "" || this.signUpData.PhoneNumber == "" || this.signUpData.password == "" || 
-    this.signUpData.confirmPassword == "" || this.signUpData.RRR == ""){
+    let detail = this.signUpDetail
+
+    if(detail.get('name').value == "" || detail.get('Email').value == "" || detail.get('PhoneNumber').value == "" || detail.get('password').value == "" || 
+    detail.get('confirmPaswword').value == "" || detail.get('RRR').value == ""){
       alert("Please, fill in the form!")
       return
     }
 
-    this.payload.name = this.signUpData.name
-    this.payload.Email = this. signUpData.Email
-    this.payload.PhoneNumber = this.signUpData.PhoneNumber
-    this.payload.password = this.signUpData.password
-    this.payload.RRR = this.signUpData.RRR
+    this.payload.name = detail.get('name').value
+    this.payload.Email = detail.get('Email').value
+    this.payload.PhoneNumber = detail.get('PhoneNumber').value
+    this.payload.password = detail.get('password').value
+    this.payload.RRR = detail.get('RRR').value
 
     this.api.signup(this.payload).subscribe(res => {
     alert('SUCCESSFULL') 
     console.log(this.payload); 
-    this.signUpData = { "name": "", "Email": "", "PhoneNumber":"", "password": "", "confirmPassword": "", "RRR":""}
+    // this.signUpData = { "name": "", "Email": "", "PhoneNumber":"", "password": "", "confirmPassword": "", "RRR":""}
     localStorage.setItem("userData", JSON.stringify(this.payload))
     // window.location.href= "/lo"
     window.location.href = "/app/form"
