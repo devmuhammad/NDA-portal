@@ -1,5 +1,5 @@
 footer{
-    margin-top: 5em;
+    margin-top: 6em;
     display: flex;
     background: rgba(0, 0, 14, 0.76);
     height: 17em;
@@ -92,11 +92,14 @@ a:hover{
     #btlogo{
         padding-left: 5px;
     }
+    .logo{
+        font-size: 8px;
+    }
 }
 
 @media (min-width:300px){
     footer{
-        font-size: 12px;
+        font-size: 6px;
     }
     .logofoot{
         padding: 10px 10px 10px 10px;
@@ -104,6 +107,13 @@ a:hover{
     }
     #btlogo{
         padding-left: 10px;
+    }
+    .logo{
+        font-size: 6px;
+    }
+    .tweet{
+        height: 8px;
+        width: 6px;
     }
 }
 
@@ -118,6 +128,9 @@ a:hover{
     #btlogo{
         padding-left: 50px;
     }
+    .logo{
+        font-size: 18px;
+    }
 }
 
 @media (min-width:1000px){
@@ -130,5 +143,8 @@ a:hover{
     }
     #btlogo{
         padding-left: 100px;
+    }
+    .logo{
+        font-size: 1em;
     }
 }

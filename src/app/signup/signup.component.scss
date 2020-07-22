@@ -53,7 +53,6 @@ a:hover{
 }
 
 .foot{
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -73,10 +72,6 @@ a:hover{
     }
 }
 
-.foot{
-    bottom: 0;
-    width: 100%;
-}
 
 @media (min-width: 400px){
     .formfield{

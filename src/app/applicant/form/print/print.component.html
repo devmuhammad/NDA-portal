@@ -1,4 +1,3 @@
-<body >
   <div id ="printElem">  
     <div class="title">
         <img class="logo" src="\assets\images\download2.png" alt="logo">
@@ -12,7 +11,6 @@
     <div class="work">   
         <img class="passport" src= {{image}} alt="passport">
     </div>
-    &nbsp;
     <div>
         <div class="grid">
             <p>Name:</p>
@@ -58,7 +56,7 @@
         </div>
         <div class="grid">
             <p>Choice of Service:</p>
-            <div style="display: flex; align-items: center;">
+            <div style="display: flex; ">
                <p>First Choice: {{choicemade.firstchoice}}</p> &nbsp; <br> &nbsp;
                <p>Second Choice: {{choicemade.secondchoice}}</p>
             </div>
@@ -68,7 +66,6 @@
 
     <h3>SCREENING TEST DETAILS</h3>
     <mat-divider></mat-divider>
-    &nbsp;
     <div>
         <div class="grid">
             <p>NDA Application No.</p>
@@ -96,5 +93,3 @@
     </p>
   </div>
     <button mat-button (click)="print()">Print</button>
-    
-</body>

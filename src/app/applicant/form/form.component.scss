@@ -2,7 +2,7 @@
 // @import url("./css/steppers.min.css");
 
 body{
-    background: rgba(0, 0, 14, 0.76);
+    // background: rgba(0, 0, 14, 0.76);
     font-size: 14px;
     overflow: hidden
 }
@@ -33,7 +33,7 @@ button{
   .general-title{
     color:red; 
     font-size:16px; 
-    font-weight: 500;
+    font-weight: 400;
     padding: 20px 0 20px 0;
   }
 
@@ -154,11 +154,39 @@ button{
     .card{
       font-size: 9px;
     }
+    .general-title{
+      font-size: 12px;
+    }
+    .tab-font{
+      font-size: 12px;
+    }
+    button{
+      font-size: 9px;
+      line-height: 20px;
+    }
+    div.mat-checkbox-inner-container{
+      height: 10px;
+      width: 10px;
+    }
   }
 
   @media (min-width: 400px){
     .card{
       font-size: 11px;
+    }
+    .general-title{
+      font-size: 14px;
+    }
+    .tab-font{
+      font-size: 14px;
+    }
+    button{
+      font-size: 12px;
+      line-height: 24px;
+    }
+    div.mat-checkbox-inner-container{
+      height: 12px;
+      width: 12px;
     }
   }
 
@@ -166,16 +194,58 @@ button{
     .card{
       font-size: 13px;
     }
+    .general-title{
+      font-size: 16px;
+    }
+    .tab-font{
+      font-size: 16px;
+    }
+    button{
+      font-size: 14px;
+      line-height: 26px;
+    }
+    div.mat-checkbox-inner-container{
+      height: 14px;
+      width: 14px;
+    }
   }
 
   @media (min-width: 800px){
     .card{
       font-size: 15px;
     }
+    .general-title{
+      font-size: 18px;
+    }
+    .tab-font{
+      font-size: 18px;
+    }
+    button{
+      font-size: 16px;
+      line-height: 28px;
+    }
+    div.mat-checkbox-inner-container{
+      height: 16px;
+      width: 16px;
+    }
   }
 
   @media (min-width: 1000px){
     .card{
       font-size: 17px;
+    }
+    .general-title{
+      font-size: 20px;
+    }
+    .tab-font{
+      font-size: 20px;
+    }
+    button{
+      font-size: 17px;
+      line-height: 38px;
+    }
+    div.mat-checkbox-inner-container{
+      height: 18px;
+      width: 18px;
     }
   }

@@ -19,15 +19,19 @@ export class SchoolattendedComponent implements OnInit {
   constructor(private api: ApiService, private _snackBar: MatSnackBar) { }
 
   submit(){
-
-    this.api.jambdetail(this.jamb).subscribe(res => {
-      console.log(this.jamb);
-      localStorage.setItem("jambno", JSON.stringify(this.jamb))
-      this._snackBar.open("Save Successful!!!", "Save", {
-        duration: 2000,
-      });
-      
-    })
+    if(this.jamb.regno == "" || this.jamb.year == ""){
+      return
+    }
+    else{
+      this.api.jambdetail(this.jamb).subscribe(res => {
+        console.log(this.jamb);
+        localStorage.setItem("jambno", JSON.stringify(this.jamb))
+        this._snackBar.open("Save Successful!!!", "Save", {
+          duration: 2000,
+        });
+        
+      })
+    }
   }
 
   selectedSitting(data){

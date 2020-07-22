@@ -19,11 +19,16 @@ body{
     height: 3em;
 }
 
+.button{ 
+width: 100%;
+float: right;
+// margin-top: 1em;
+bottom: 0;
+position: absolute;
 button{
     background: rgba(0, 0, 14, 0.76);
     color: white;
-    // float: right;
-    // margin-top: 1em;
-    bottom: 0;
-    position: absolute;
-  }
+    float: right;
+    margin-right: 5.5em;
+}
+}

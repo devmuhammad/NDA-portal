@@ -3,6 +3,7 @@ import { Util } from "../helpers/utilities";
 import { ApiService } from 'src/app/api.service';
 import { DataService } from 'src/app/data.service';
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { isEmpty } from 'rxjs/operators';
 
 @Component({
   selector: 'app-personaldetails',
@@ -34,15 +35,16 @@ export class PersonaldetailsComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    console.log(this.imgURL);
     
   }
 
-  
  
   preview(files) {
     if (files.length === 0)
       return;
- 
+
     var mimeType = files[0].type;
     if (mimeType.match(/image\/*/) == null) {
       this.message = "Only images are supported.";
@@ -51,6 +53,8 @@ export class PersonaldetailsComponent implements OnInit {
     else{
       this.message = "";
     }
+
+    document.getElementById('click').innerHTML = "";
  
     var reader = new FileReader();
     this.imagePath = files;
@@ -58,10 +62,7 @@ export class PersonaldetailsComponent implements OnInit {
     reader.onload = (_event) => { 
       this.imgURL = reader.result; 
       const dataUrl = this.imgURL;
-      console.log(this.imgURL);
-      console.log(this.imagePath)
     localStorage.setItem("image", JSON.stringify(this.imgURL))
-
     }
 
       // this.selectedFile = event.target.files[0];

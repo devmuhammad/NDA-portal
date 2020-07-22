@@ -47,6 +47,46 @@
       "password": "admin",
       "RRR": "789274553716666",
       "id": 6
+    },
+    {
+      "name": "mubeen",
+      "Email": "mubeen02@gmail.com",
+      "PhoneNumber": "08165931631",
+      "password": "mubeen",
+      "RRR": "73579890181944",
+      "id": 7
+    },
+    {
+      "name": "baboon",
+      "Email": "baboon@g.c",
+      "PhoneNumber": "09090909090",
+      "password": "baboon",
+      "RRR": "995631384142712",
+      "id": 8
+    },
+    {
+      "name": "master",
+      "Email": "master@g.com",
+      "PhoneNumber": "08165931631",
+      "password": "master",
+      "RRR": "619245690078344",
+      "id": 9
+    },
+    {
+      "name": "Haruna Precious Eshiozokhe",
+      "Email": "RUBBISH",
+      "PhoneNumber": "07082063132",
+      "password": "123456",
+      "RRR": "61785458891887",
+      "id": 10
+    },
+    {
+      "name": "testing two",
+      "Email": "test@g.com",
+      "PhoneNumber": "09029903909",
+      "password": "king",
+      "RRR": "21805473372451",
+      "id": 11
     }
   ],
   "payment": [
@@ -67,6 +107,54 @@
       "email": "muhammad.s@comsoftltd.com",
       "RRR": "789274553716666",
       "id": 3
+    },
+    {
+      "name": "mubeen",
+      "email": "mubeen02@gmail.com",
+      "RRR": "73579890181944",
+      "id": 4
+    },
+    {
+      "name": "monkey",
+      "email": "monkey@g.c",
+      "RRR": "331012352437018",
+      "id": 5
+    },
+    {
+      "name": "baboon",
+      "email": "baboon@g.c",
+      "RRR": "995631384142712",
+      "id": 6
+    },
+    {
+      "name": "master",
+      "email": "master@g.com",
+      "RRR": "619245690078344",
+      "id": 7
+    },
+    {
+      "name": "Haruna Precious Eshiozokhe",
+      "email": "RUBBISH",
+      "RRR": "61785458891887",
+      "id": 8
+    },
+    {
+      "payerName": "new account",
+      "payerEmail": "acct@yahoo.com",
+      "rrr": "105693054343160",
+      "id": 9
+    },
+    {
+      "payerName": "testing",
+      "payerEmail": "test@g.com",
+      "RRR": "336404375484080",
+      "id": 10
+    },
+    {
+      "name": "testing two",
+      "email": "test@g.com",
+      "RRR": "21805473372451",
+      "id": 11
     }
   ],
   "applicantData": [
@@ -107,6 +195,63 @@
       "religion": "islam",
       "height": 1.78,
       "id": 2
+    },
+    {
+      "lastname": "Abdulhameed",
+      "firstname": "Mubeen",
+      "serviceno": "",
+      "email": "mohdmubeen137@gmail.com",
+      "presentAddy": "zone 6, Aso pure water",
+      "permanentAddy": "Dutse Alhaji, Abuja",
+      "number1": "08165931631",
+      "number2": "",
+      "POB": "Lagos",
+      "DOB": "1999-05-25T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Kogi",
+      "LGA": "Okene",
+      "city": "Agasa",
+      "religion": "islam",
+      "height": 1.7,
+      "id": 3
+    },
+    {
+      "lastname": "ESHIOZOKHE",
+      "firstname": "HARUNA PRECIOUS",
+      "serviceno": "",
+      "email": "RUBBISH",
+      "presentAddy": "ABUJA",
+      "permanentAddy": "ABUJA",
+      "number1": "07082063132",
+      "number2": "08101214895",
+      "POB": "KANO",
+      "DOB": "2020-03-26T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Edo",
+      "LGA": "Etsako East",
+      "city": "Abuja",
+      "religion": "islam",
+      "height": -5,
+      "id": 4
+    },
+    {
+      "lastname": "human",
+      "firstname": "people",
+      "serviceno": "",
+      "email": "mubeen@something.yeah",
+      "presentAddy": "a place",
+      "permanentAddy": "where we stay",
+      "number1": "08036520667",
+      "number2": "",
+      "POB": "a hospital",
+      "DOB": "1993-07-12T23:00:00.000Z",
+      "gender": "male",
+      "SOG": "Adamawa",
+      "LGA": "Gayuk",
+      "city": "gayuk",
+      "religion": "islam",
+      "height": 1.4,
+      "id": 5
     }
   ],
   "guardianData": [
@@ -161,6 +306,45 @@
       "relationship2": "Sister",
       "address2": "Zone B, karimu west Ilorin",
       "id": 4
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@g.com",
+      "number1": "08036677652",
+      "relationship1": "Father",
+      "address1": "zone 6, Aso pure water",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 5
+    },
+    {
+      "parentName1": "Abdulhameed Abdulkareem",
+      "email1": "abdulhmd002@g.com",
+      "number1": "08036677652",
+      "relationship1": "Father",
+      "address1": "zone 6, Aso pure water",
+      "parentName2": "",
+      "email2": "",
+      "number2": "",
+      "relationship2": "",
+      "address2": "",
+      "id": 6
+    },
+    {
+      "parentName1": "HARUNA ICHIOJI",
+      "email1": "RUBBISHAS",
+      "number1": "08054055277",
+      "relationship1": "SON",
+      "address1": "EDO",
+      "parentName2": "VICTORIA HARUNA",
+      "email2": "HONTION",
+      "number2": "08036079122",
+      "relationship2": "",
+      "address2": "",
+      "id": 7
     }
   ],
   "choices": [
@@ -187,6 +371,30 @@
       "department": "Security and Intelligence Science",
       "course": "BSc. Security and Intelligence Science",
       "id": 8
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN AIRFORCE",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 9
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN AIRFORCE",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 10
+    },
+    {
+      "firstchoice": "NIGERIAN ARMY",
+      "secondchoice": "NIGERIAN NAVY",
+      "faculty": "Faculty of Military Science and Interdisciplinary Studies",
+      "department": "Computer Science",
+      "course": "BSc. Computer Science",
+      "id": 11
     }
   ],
   "jambdetail": [
@@ -213,6 +421,24 @@
       "examno": "",
       "year": "2020",
       "id": 4
+    },
+    {
+      "regno": "",
+      "examno": "",
+      "year": "",
+      "id": 5
+    },
+    {
+      "regno": "47271732GF",
+      "examno": "",
+      "year": "2020",
+      "id": 6
+    },
+    {
+      "regno": "12345678888GFGHHH",
+      "examno": "7667YYTY7YYTY",
+      "year": "2020",
+      "id": 7
     }
   ]
 }

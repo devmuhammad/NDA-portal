@@ -20,13 +20,13 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="inp">
             <mat-label> Confirm Email: </mat-label>
-            <input matInput type="email" [(ngModel)] ="purchaseData.confirmEmail">
+            <input matInput type="email" [(ngModel)] ="purchaseData.confirmEmail" (change)='checkEmailMatch()'>
         </mat-form-field>
       </div>
-        <div style="color: blue; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
+        <div style="color: red; font-size: 15px; font-style: italic;">{{errorMsg}}</div>
         <mat-form-field appearance="outline">
             <mat-label> Payer Phone: </mat-label>
-            <input matInput type="tel" [(ngModel)] ="purchaseData.number">
+            <input matInput type="tel" [(ngModel)] ="purchaseData.number" minlength="11" maxlength="11">
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label> Amount: </mat-label>
@@ -38,6 +38,6 @@
     </mat-card>
 </div>
 
-<div class="foot" style="padding: 36px 0 0 0;">
+<div class="foot">
     <app-footerapp></app-footerapp>
 </div>

@@ -43,6 +43,14 @@ button{
     h3{
         font-size: 10px;
     }
+    .passport{
+      width: 2em;
+      height: 2em;
+    }
+    .img{
+      width: 2em;
+      height: 2em;
+    }
 }
 
 @media(min-width: 400px){
@@ -55,6 +63,14 @@ button{
     }
     h3{
         font-size: 12px;
+    }
+    .passport{
+      width: 8em;
+      height: 8em;
+    }
+    .img{
+      width: 8em;
+      height: 8em;
     }
 }
 
@@ -69,6 +85,14 @@ button{
     h3{
         font-size: 16px;
     }
+    .passport{
+      width: 10em;
+      height: 10em;
+    }
+    .img{
+      width: 10em;
+      height: 10em;
+    }
 }
 
 @media(min-width: 800px){
@@ -81,6 +105,14 @@ button{
     }
     h3{
         font-size: 18px;
+    }
+    .passport{
+      width: 13em;
+      height: 13em;
+    }
+    .img{
+      height: 13em; 
+      width: 13em;
     }
 }
 
@@ -95,53 +127,6 @@ button{
     h3{
         font-size: 22px;
     }
-}
-
-@media (min-width: 200px){
-    .passport{
-      width: 2em;
-      height: 2em;
-    }
-    .img{
-      width: 2em;
-      height: 2em;
-    }
-  }
-
-  @media (min-width: 400px){
-    .passport{
-      width: 8em;
-      height: 8em;
-    }
-    .img{
-      width: 8em;
-      height: 8em;
-    }
-  }
-
-  @media (min-width: 600px){
-    .passport{
-      width: 10em;
-      height: 10em;
-    }
-    .img{
-      width: 10em;
-      height: 10em;
-    }
-  }
-
-  @media (min-width: 800px){
-    .passport{
-      width: 13em;
-      height: 13em;
-    }
-    .img{
-      height: 13em; 
-      width: 13em;
-    }
-  }
-
-  @media (min-width: 1000px){
     .passport{
       width: 13em;
       height: 13em;
@@ -153,4 +138,4 @@ button{
     .work{
         top: 15em;
     }
-  }
+}
