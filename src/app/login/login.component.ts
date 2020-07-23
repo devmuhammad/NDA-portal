@@ -65,10 +65,9 @@ export class LoginComponent implements OnInit {
         return
       }
       else {
-    
+        this.errorpassword = 'The password is invalid!'
+        data.get('password').value == ''
       }
-      this.errorpassword = 'The password is invalid!'
-      data.get('password').value == ''
     }
   
   }
