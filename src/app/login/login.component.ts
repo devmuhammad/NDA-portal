@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
 
     if (data.get('Email').value == "" || data.get('password').value == " "){
       alert('Please, input your login details!')
+      return
     }
 
     for (let i = 0; i < this.login.length; i++) {
@@ -62,12 +63,12 @@ export class LoginComponent implements OnInit {
         let loginDet = this.login[i]
         localStorage.setItem("userData", JSON.stringify(loginDet))
         window.location.href = "/app/form"
-        return
       }
       else {
-        this.errorpassword = 'The password is invalid!'
-        data.get('password').value == ''
+       
       }
+      this.errorpassword = 'The Username or Password is incorrect'
+      data.get('password').setValue == null
     }
   
   }
